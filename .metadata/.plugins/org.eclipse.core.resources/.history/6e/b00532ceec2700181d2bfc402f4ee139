@@ -1,0 +1,12 @@
+package objectBased;
+
+public class latihan2 
+{
+	int x,y,z;
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		// TODO P Simbolon
+	}
+
+}

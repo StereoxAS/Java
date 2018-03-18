@@ -1,0 +1,22 @@
+package objectBased;
+
+import java.util.Scanner;
+
+public class latihan2 
+{
+	public static void main(String[] args) 
+	{
+		int x,y,z;
+		String keinginanTodo, b, c;
+		
+		// TODO Auto-generated method stub
+		// TODO P Simbolon
+		System.out.println("Selamat datang di Program Todo. Anda mau apa ?");
+		Scanner scan = new Scanner(System.in);
+		
+		keinginanTodo = scan.next();
+		
+		System.out.println("Todo ingin " + keinginanTodo);
+	}
+
+}
