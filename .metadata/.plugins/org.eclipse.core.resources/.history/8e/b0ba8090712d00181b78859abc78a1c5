@@ -1,0 +1,18 @@
+
+public class Dosen extends Mahasiswa 
+{
+	private String nip;
+	
+	Dosen() 
+	{
+		// TODO Auto-generated constructor stub
+	}
+	Dosen(String nip)
+	{
+		this.nip = nip;
+	}
+	public String getNip()
+	{
+		return this.nip;
+	}
+}

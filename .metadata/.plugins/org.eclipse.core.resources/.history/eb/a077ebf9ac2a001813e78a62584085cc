@@ -1,0 +1,8 @@
+
+public class CharaClassSorcerer extends CharaClass 
+{
+	public void getClassDetail()
+	{
+		className = "Sorcerer";
+		classDesc = "";
+}

@@ -1,0 +1,247 @@
+import java.util.*;
+
+public class test
+{
+	
+	public static void main(String[] args) 
+	{
+		/*
+		 * Buat character creation-nya.
+		 * Nama 	-> Input
+		 * Gender	-> Pilihan
+		 * Job 		-> Pilihan
+		 * Race 	-> Pilihan
+		 * Max. 8 characters.
+		 * 
+		 * Race description belum ada class-nya. 
+		 * Gender description juga belum ada
+		 */
+		
+		String nama = "Undefined";
+		String genderString;
+		String jobString;
+		String raceString;
+		CharaGender gender = null;
+		CharaJob job = null;
+		CharaRace race = null;
+		String yes;
+		char tidakJelas = 'y';
+		boolean bool = false;
+		int i;
+		
+		Scanner scan = new Scanner(System.in);
+		List<Chara> newChara = new ArrayList<Chara>();
+		for(i = 0; i < 1; i++) 
+		{
+			while(bool == false)
+			{
+				Utils.clrscr();
+				System.out.println("Dungeon and Dragons Character Creation\n\n");				
+				System.out.print("Enter your name : ");
+				nama = scan.next();
+				System.out.println("\n" + nama + ", is that true ? [Y/N]");
+				yes = scan.next();
+				if(yes.equalsIgnoreCase("Y"))
+				{
+					bool = true;
+				}
+				else
+				{
+					bool = false;
+				}
+			}
+			
+			Utils.clrscr();
+			System.out.println("Dungeon and Dragons Character Creation\n\n");			
+			System.out.println("1. MALE");
+			System.out.println(CharaGender.getDescription(CharaGender.MALE));
+			System.out.println("2. FEMALE");
+      System.out.println(CharaGender.getDescription(CharaGender.FEMALE));
+			System.out.println("Select your gender : ");
+			genderString = scan.next();
+			bool = false;
+			while(bool == false)
+			{
+				if(genderString.equalsIgnoreCase("Male") || genderString.equalsIgnoreCase("1"))
+				{
+					gender = CharaGender.MALE;
+					break;
+				}
+				else if(genderString.equalsIgnoreCase("Female") || genderString.equalsIgnoreCase("2"))
+				{
+					gender = CharaGender.FEMALE;
+					break;
+				}
+				else
+				{
+					System.out.println("There's no such gender.");
+				}
+			}
+			
+			
+			
+			while(bool == false)
+			{
+				Utils.clrscr();
+				System.out.println("Dungeon and Dragons Character Creation\n\n");
+				System.out.println(""
+								 + "1. Human\n"
+								 + "2. Elves\n"
+								 + "3. Orcs\n"
+								 + "4. Goblin\n"
+								 + "5. Gnome\n"
+								 + "6. Halfling\n"
+								 + "7. Dwarves\n"
+								 + "8. Khajiit\n"
+								 + "9. Argonian\n");
+				
+				System.out.print("Select your Race : ");
+				raceString = scan.next();
+				System.out.println("raceString : " + raceString);
+				System.out.println("\n");
+				if(raceString.equalsIgnoreCase("Human"))
+				{
+					race = CharaRace.HUMAN; tidakJelas = 'y';
+				}
+				else if(raceString.equalsIgnoreCase("Elves"))
+				{
+					race = CharaRace.ELF; tidakJelas = 'y';
+				}
+				else if(raceString.equalsIgnoreCase("Orcs"))
+				{
+					race = CharaRace.ORC; tidakJelas = 'y';
+				}
+				else if(raceString.equalsIgnoreCase("Goblin"))
+				{
+					race = CharaRace.GOBLIN; tidakJelas = 'y';
+				}
+				else if(raceString.equalsIgnoreCase("Gnome"))
+				{
+					race = CharaRace.GNOME; tidakJelas = 'y';
+				}
+				else if(raceString.equalsIgnoreCase("Halfling") || raceString.equalsIgnoreCase("Hobbit"))
+				{
+					race = CharaRace.HALFLING; tidakJelas = 'y';
+				}
+				else if(raceString.equalsIgnoreCase("Dwarves"))
+				{
+					race = CharaRace.DWARF; tidakJelas = 'y';
+				}
+				else if(raceString.equalsIgnoreCase("Khajiit"))
+				{
+					race = CharaRace.KHAJIIT; tidakJelas = 'y';
+				}
+				else if(raceString.equalsIgnoreCase("Argonian"))
+				{
+					race = CharaRace.ARGONIAN; tidakJelas = 'y';
+				}
+				else
+				{
+					System.out.println("There's no such race. "
+							+ "\nMake sure you enter race's Name correctly instead of the number.\n");
+					tidakJelas = 'n';
+				}
+				if(tidakJelas == 'y' || tidakJelas == 'Y')
+				{
+					System.out.println(CharaRace.getDescription(race));
+					System.out.println("\nSelect " + raceString + "? [Y/N]");
+					yes = scan.next();
+					if(yes.equalsIgnoreCase("Y"))
+					{
+						bool = true;
+					}
+				}				
+			}
+			
+			Utils.clrscr();
+			System.out.println("Dungeon and Dragons Character Creation\n\n");			
+			System.out.println("Class : \n"
+							 + "1. Barbarian\n"
+							 + "2. Bard\n"
+							 + "3. Cleric\n"
+							 + "4. Druid\n"
+							 + "5. Fighter\n"
+							 + "6. Mage\n"
+							 + "7. Monk\n"
+							 + "8. Paladin\n"
+							 + "9. Ranger\n"
+							 + "10. Sorcerer\n"
+							 + "11. Thief\n");
+			bool = false;
+			while(bool == false)
+			{
+				System.out.print("Select your class : ");
+				jobString = scan.next();
+				System.out.println("jobString : " + jobString);
+				if(jobString.equalsIgnoreCase("Barbarian") || genderString.equals("1"))
+				{
+					job = CharaJob.BARBARIAN;
+				}
+				else if(jobString.equalsIgnoreCase("Bard") || genderString.equals("2"))
+				{
+					job = CharaJob.BARD;
+				}
+				else if(jobString.equalsIgnoreCase("Cleric") || genderString.equals("3"))
+				{
+					job = CharaJob.CLERIC;
+				}
+				else if(jobString.equalsIgnoreCase("Druid") || genderString.equals("4"))
+				{
+					job = CharaJob.DRUID;
+				}
+				else if(jobString.equalsIgnoreCase("Fighter") || genderString.equals("5"))
+				{
+					job = CharaJob.FIGHTER;
+				}
+				else if(jobString.equalsIgnoreCase("Mage") || genderString.equals("6"))
+				{
+					job = CharaJob.MAGE;
+				}
+				else if(jobString.equalsIgnoreCase("Monk") || genderString.equals("7"))
+				{
+					job = CharaJob.MONK;
+				}
+				else if(jobString.equalsIgnoreCase("Paladin") || genderString.equals("8"))
+				{
+					job = CharaJob.PALADIN;
+				}
+				else if(jobString.equalsIgnoreCase("Ranger") || genderString.equals("9"))
+				{
+					job = CharaJob.RANGER;
+				}
+				else if(jobString.equalsIgnoreCase("Sorcerer") || genderString.equals("10"))
+				{
+					job = CharaJob.SORCERER;
+				}
+				else if(jobString.equalsIgnoreCase("Thief") || genderString.equals("11"))
+				{
+					job = CharaJob.THIEF;
+				}
+				else
+				{
+					System.out.println("There's no such class.");
+				}
+				System.out.println(CharaJob.getDescription(job));
+				System.out.println("\nSelect " + jobString + "? [Y/N]");
+				yes = scan.next();
+				if(yes.equalsIgnoreCase("Y"))
+				{
+					bool = true;
+				}
+			}
+			
+			newChara.add(new Chara(nama, gender, job, race));
+		}
+		
+		Utils.clrscr();
+		System.out.println("Dungeon and Dragons Character Creation\n\n");
+		
+		
+		for(i = 0; i < 1; i++)
+		{
+			System.out.println(newChara.get(i).getCharaDescription());
+		}
+
+		scan.close();
+  	}
+}

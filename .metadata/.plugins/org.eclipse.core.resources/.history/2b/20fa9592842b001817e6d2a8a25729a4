@@ -1,0 +1,59 @@
+
+public class Game 
+{
+	private static String namaGame;
+	private static String devGame;
+	private static int priceGame;
+	
+	public Game(String namaGame, String devGame, int priceGame) 
+	{
+		Game.namaGame = namaGame;
+		Game.devGame = devGame;
+		Game.priceGame = priceGame;
+	}
+	public Game() 
+	{
+		Game.namaGame = "-";
+		Game.devGame = "-";
+		Game.priceGame = 0;
+	}
+	
+	public static void getGameDetail()
+	{
+		System.out.println("\nGame		: " + Game.namaGame);
+		System.out.println("Developer	: " + Game.devGame);
+		System.out.println("Price		: " + Game.priceGame);
+	}
+
+	public String getNamaGame() 
+	{
+		return namaGame;
+	}
+
+	public void setNamaGame(String namaGame) 
+	{
+		Game.namaGame = namaGame;
+	}
+
+	public String getDevGame() 
+	{
+		return devGame;
+	}
+
+	public void setDevGame(String devGame) 
+	{
+		Game.devGame = devGame;
+	}
+
+	public int getPriceGame() 
+	{
+		return priceGame;
+	}
+
+	public void setPriceGame(int priceGame) 
+	{
+		Game.priceGame = priceGame;
+	}
+	
+	
+}

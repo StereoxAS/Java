@@ -1,0 +1,16 @@
+
+public class Selection 
+{
+	public static void getGameChoiceList()
+	{
+		
+	}
+	public static void getAppChoiceList()
+	{
+		
+	}
+	public static void getMusicChoiceList()
+	{
+		
+	}
+}

@@ -1,0 +1,6 @@
+
+public class Gender 
+{
+	String genderType;
+	
+}

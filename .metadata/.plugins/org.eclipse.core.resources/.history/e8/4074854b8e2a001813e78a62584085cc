@@ -1,0 +1,11 @@
+public enum CharaRaceEnum {
+  HUMAN,
+  ELVES,
+  ORC,
+  GOBLIN,
+  GNOME,
+  HALFLING,
+  DWARF,
+  KHAJIIT,
+  ARGONIAN
+}

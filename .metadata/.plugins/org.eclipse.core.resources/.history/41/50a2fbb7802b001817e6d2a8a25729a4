@@ -1,0 +1,9 @@
+
+public class Game 
+{
+	private String namaGame;
+	private String devGame;
+	private int priceGame;
+	
+	
+}

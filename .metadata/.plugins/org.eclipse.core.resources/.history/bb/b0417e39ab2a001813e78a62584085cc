@@ -1,0 +1,8 @@
+
+public class CharaClassRanger extends CharaClass {
+	public void getClassDetail()
+	{
+		className = "";
+		classDesc = "";
+	}
+}

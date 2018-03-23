@@ -1,0 +1,10 @@
+
+public class CleaningService extends Mahasiswa 
+{
+	private Mahasiswa mhs[];
+	
+	public CleaningService() 
+	{
+		
+	}
+}

@@ -1,0 +1,20 @@
+
+public class Game 
+{
+	private String namaGame;
+	private String devGame;
+	private int priceGame;
+	
+	public Game(String namaGame, String devGame, int priceGame) 
+	{
+		this.namaGame = namaGame;
+		this.devGame = devGame;
+		this.priceGame = priceGame;
+	}
+	public static getGameDetail()
+	{
+		
+	}
+	
+	
+}

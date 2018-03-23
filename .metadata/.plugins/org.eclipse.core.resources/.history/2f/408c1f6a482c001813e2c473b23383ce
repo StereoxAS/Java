@@ -1,0 +1,23 @@
+
+public class ProductEyeBeauty 
+{
+	private String nameTag;
+	private String descTag;
+	private int priceTag;
+	
+	public ProductEyeBeauty(String nameTag, String descTag, String priceTag) 
+	{
+		// TODO buat constructor-nya 
+	}
+	public ProductEyeBeauty() 
+	{
+		//constructor kosong
+		this.nameTag = "";
+		this.descTag = "";
+		this.priceTag = ;
+	}
+	
+	// List Eye make-up buat secukupnya
+	
+	ProductEyeBeauty Eclipse = new ProductFaceBeauty();
+}

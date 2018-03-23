@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Main 
+{
+	public static void main(String[] args) 
+	{	
+		int pilihan;
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Fenty Beauty by Fenty | Beauty for All\n");
+		
+		System.out.print("Pilih produk kami : ");
+		Product.getProductDetails();
+		pilihan = scan.nextInt();
+		
+		if(pilihan == 1)
+		{
+			
+		}
+		
+		scan.close();
+	}
+}

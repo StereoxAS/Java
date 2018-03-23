@@ -1,0 +1,12 @@
+public class CharaRace 
+{
+	private CharaRaceEnum HUMAN;
+	private CharaRaceEnum ELVES
+	private CharaRaceEnum ORC
+	private CharaRaceEnum GOBLIN
+	private CharaRaceEnum GNOME
+	private CharaRaceEnum HALFLING
+	private CharaRaceEnum DWARF
+	private CharaRaceEnum KHAJIIT
+	private CharaRaceEnum ARGONIAN
+}

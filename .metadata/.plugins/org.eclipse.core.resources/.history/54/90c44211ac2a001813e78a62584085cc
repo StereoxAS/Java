@@ -1,0 +1,9 @@
+
+public class CharaClassMage extends CharaClass {
+	public void getClassDetail()
+	{
+		className = "Mage";
+		classDesc = "";
+	}
+	
+}

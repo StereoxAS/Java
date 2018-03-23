@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Main 
+{
+	public static void main(String[] args) 
+	{	
+		int pilihan;
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Fenty Beauty by Fenty | Beauty for All\n");
+		
+		System.out.print("Pilih produk kami : ");
+		Product.getProductDetails();
+		pilihan = scan.nextInt();
+		
+		if(pilihan == 1)
+		{
+			ProductFaceBeauty.getFoundation().getNameTag();
+			ProductFaceBeauty.getPrimer().getNameTag();
+			ProductFaceBeauty.getHighlighter().getNameTag();
+			ProductFaceBeauty.getBrush().getNameTag();
+		}
+		else if(pilihan == 2)
+		{
+			ProductEyeBeauty.getEclipse().getNameTag();
+			ProductEyeBeauty.getGalaxy().getNameTag();
+		}
+		else if(pilihan == 3)
+		{
+			
+		}
+		
+		scan.close();
+	}
+}

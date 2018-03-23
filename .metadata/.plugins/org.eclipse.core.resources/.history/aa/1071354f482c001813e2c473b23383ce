@@ -1,0 +1,12 @@
+
+public class ProductEyeBeauty 
+{
+	private String nameTag;
+	private String descTag;
+	private int priceTag;
+	
+	public ProductEyeBeauty(String nameTag, String descTag, String priceTag) 
+	{
+		// TODO Auto-generated constructor stub
+	}
+}

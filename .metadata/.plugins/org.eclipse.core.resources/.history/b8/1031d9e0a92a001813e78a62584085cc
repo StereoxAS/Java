@@ -1,0 +1,8 @@
+
+public class CharaClassRanger {
+	public void getClassDetail()
+	{
+		className = "";
+		classDesc = "";
+	}
+}

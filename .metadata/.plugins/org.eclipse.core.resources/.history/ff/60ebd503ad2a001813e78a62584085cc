@@ -1,0 +1,11 @@
+
+public class CharaClassBarbarian extends CharaClass {
+	public void getClassDetail()
+	{
+		className = "Barbarian";
+		classDesc = "Barbarians can be excellent warriors. While not as disciplined or as skilled as a normal fighter, "
+				+ "the barbarian can willingly throw himself into a berserker rage, becoming a tougher and stronger opponent. "
+				+ "Barbarians can't use plate mail armor, like the other warrior classes.\n"
+				+ "Barbarians have +4 bonus to Strength.";
+	}
+}

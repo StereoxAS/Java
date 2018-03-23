@@ -1,0 +1,7 @@
+
+public class Dosen extends Mahasiswa 
+{
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,16 @@
+
+public class CleaningService extends Mahasiswa 
+{
+	private int lamaPengalamanKerja;
+	private CleaningService cs[];
+	private Mahasiswa mhs[];
+	
+	public CleaningService() 
+	{
+		if (mhs[1] instanceof Mahasiswa)
+		{
+			Mahasiswa m1 = (Mahasiswa) mhs[1];
+		}
+		
+	}
+}

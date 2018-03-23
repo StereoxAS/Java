@@ -1,0 +1,8 @@
+
+public class CharaClassThief {
+	public void getClassDetail()
+	{
+		className = "";
+		classDesc = "";
+	}
+}

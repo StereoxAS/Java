@@ -1,0 +1,32 @@
+
+public class CharaHMS 
+{
+	private int health;
+	private int mana;
+	private int stamina;
+	private int speed;
+	private int magicLevel;
+	private int miracleLevel;
+	
+	public CharaHMS(int health, int mana, int stamina, int speed, int magicLevel, int miracleLevel) 
+	{
+		this.health = health;
+		this.mana = mana;
+		this.stamina = stamina;
+		this.speed = speed;
+		this.magicLevel = magicLevel;
+		this.miracleLevel = miracleLevel;
+	}
+	public CharaHMS() 
+	{
+		this.health = health;
+		this.mana = mana;
+		this.stamina = stamina;
+		this.speed = speed;
+		this.magicLevel = magicLevel;
+		this.miracleLevel = miracleLevel;
+	}
+	
+	
+	
+}

@@ -1,0 +1,8 @@
+
+public class CharaClassCleric {
+	public void getClassDetail()
+	{
+		className = "";
+		classDesc = "";
+	}
+}

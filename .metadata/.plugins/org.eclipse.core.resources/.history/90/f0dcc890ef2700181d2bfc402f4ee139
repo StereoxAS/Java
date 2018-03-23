@@ -1,9 +1,0 @@
-package objectBased;
-
-public class Makan 
-{
-	String makanan;
-	String lauk;
-	String minuman;
-	String warung;
-}

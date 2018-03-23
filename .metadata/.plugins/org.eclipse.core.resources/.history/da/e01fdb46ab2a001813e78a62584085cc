@@ -1,0 +1,8 @@
+
+public class CharaClassBard extends CharaClass {
+	public void getClassDetail()
+	{
+		className = "";
+		classDesc = "";
+	}
+}

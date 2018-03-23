@@ -1,0 +1,10 @@
+import java.lang.reflect.Constructor;
+
+public class ProductLipBeauty 
+{
+	private String nameTag;
+	private String descTag;
+	private int priceTag;
+	
+	
+}

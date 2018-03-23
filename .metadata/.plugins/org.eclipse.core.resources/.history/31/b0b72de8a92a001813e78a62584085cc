@@ -1,0 +1,8 @@
+
+public class CharaClassMonk {
+	public void getClassDetail()
+	{
+		className = "";
+		classDesc = "";
+	}
+}

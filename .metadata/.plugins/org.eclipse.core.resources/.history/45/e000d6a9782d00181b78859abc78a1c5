@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Main 
+{
+	static Mahasiswa mhs[];
+	String string;
+	int integer;
+	boolean bool;
+	Scanner scan = new Scanner(System.in);
+	
+	public static void main(String[] args) 
+	{
+		//System.out.println("Your beauty's not just a mask.");
+		Mahasiswa m1 = new Mahasiswa();
+		mhs[0] = new Mahasiswa();
+		mhs[1] = new Dosen();
+		mhs[2] = new CleaningService();
+		
+		for(int i = 0;i<2;i++)
+		{	
+			if(mhs[i] instanceof Mahasiswa)
+			{
+				System.out.println("mhs[0] adalah Mahasiswa");
+			}
+			else if(mhs[i] instanceof Dosen)
+			{
+				System.out.println("mhs[0] adalah Dosen");
+			}
+			else if(mhs[i] instanceof CleaningService)
+			{
+				System.out.println("mhs[0] adalah CleaningService");
+			}
+		}
+		
+		
+		
+		System.out.println();
+	}
+}

@@ -1,0 +1,16 @@
+
+public class CleaningService extends Mahasiswa 
+{
+	private int lamaPengalamanKerja;
+	private Mahasiswa mhs[];
+	
+	public CleaningService() 
+	{
+		// TODO Auto-generated constructor stub
+		if (mhs[1] instanceof Mahasiswa)
+		{
+			
+		}
+		
+	}
+}

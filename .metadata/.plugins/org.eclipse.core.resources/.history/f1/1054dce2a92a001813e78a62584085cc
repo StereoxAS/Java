@@ -1,0 +1,8 @@
+
+public class CharaClassDruid {
+	public void getClassDetail()
+	{
+		className = "";
+		classDesc = "";
+	}
+}

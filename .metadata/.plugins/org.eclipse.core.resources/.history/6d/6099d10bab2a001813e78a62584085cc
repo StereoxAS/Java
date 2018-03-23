@@ -1,0 +1,8 @@
+
+public class CharaClassCleric extends CharaClass {
+	public void getClassDetail()
+	{
+		className = "";
+		classDesc = "";
+	}
+}

@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Selection
+{
+	public static void getSelect() 
+	{
+		int opt;
+		int opt1;
+		
+		Scanner Select = new Scanner(System.in);
+		
+		
+		opt1=Select.nextInt();
+		switch (opt1) 
+		{
+		case 1:
+			System.out.println("Available Games :\n");
+			System.out.println("1. Minecraft");
+			System.out.println("2. Mobile Legends\n");
+		
+			
+			opt=GameChoice.nextInt();
+			
+			GameChoice.close();		
+		}
+	}
+}

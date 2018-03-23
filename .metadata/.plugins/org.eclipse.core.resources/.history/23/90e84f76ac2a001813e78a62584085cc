@@ -1,0 +1,8 @@
+
+public class CharaClassMonk extends CharaClass {
+	public void getClassDetail()
+	{
+		className = "Monk";
+		classDesc = "";
+	}
+}

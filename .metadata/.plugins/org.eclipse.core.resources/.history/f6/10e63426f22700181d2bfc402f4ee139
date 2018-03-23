@@ -1,8 +1,0 @@
-package objectBased;
-
-public class Tidur 
-{
-	int durasi;
-	String lokasi;
-	String posisi;
-}

@@ -1,0 +1,15 @@
+
+public class Main 
+{
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		Game minecraft = new Game("Minecraft", "Mojang", 99000);
+		Game terraria = new Game("Minecraft", "Mojang", 99000);
+		Game ml = new Game("Minecraft", "Mojang", 99000);
+		Game candycrush = new Game("Minecraft", "Mojang", 99000);
+
+	}
+
+}

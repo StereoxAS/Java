@@ -1,0 +1,8 @@
+
+public class CharaClassThief extends CharaClass {
+	public void getClassDetail()
+	{
+		className = "";
+		classDesc = "";
+	}
+}

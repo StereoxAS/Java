@@ -1,0 +1,8 @@
+
+public class CharaClassBard {
+	public void getClassDetail()
+	{
+		className = "";
+		classDesc = "";
+	}
+}

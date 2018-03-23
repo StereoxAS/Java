@@ -1,0 +1,10 @@
+
+public enum CharaGender 
+{
+	String genderType;
+	
+	CharaGender()
+	{
+		this.genderType
+	}
+}

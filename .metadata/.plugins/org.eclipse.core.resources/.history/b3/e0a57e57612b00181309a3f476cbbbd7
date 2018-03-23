@@ -1,0 +1,129 @@
+public class CharaClass 
+{
+	private static String className;
+	private static String classDesc;
+	int bonusStr;
+	int bonusDex;
+	int bonusVit;
+	int bonusInt;
+	int bonusWis;
+	int bonusCha;
+	int bonusAll;
+	
+	CharaClass(String className, String classDesc, CharaAttributes attributes)
+	{
+		CharaClass.className = className;
+		CharaClass.classDesc = classDesc;
+	}
+	CharaClass()
+	{
+		CharaClass.className = "Undefined";
+		CharaClass.classDesc = "Undefined";
+	}
+	public static String setClassName(String className) 
+	{
+		CharaClass.className = className;
+		return className;
+	}
+	public static String setClassDesc(String classDesc) 
+	{
+		CharaClass.classDesc = classDesc;
+		return classDesc;
+	}
+	
+	public static void setBonusAttributes(CharaJobEnum job)
+	{
+		switch(job)
+		{
+		case BARBARIAN : 
+			CharaAttributes.addStrength(4);
+			break;
+		case BARD : 
+			CharaAttributes.addDexterity(1);
+			CharaAttributes.addInteligence(1);
+			CharaAttributes.addCharisma(2);
+			break;
+		case CLERIC : 
+			CharaAttributes.addWisdom(4);
+			break;
+		case DRUID : 
+			CharaAttributes.addDexterity(2);
+			CharaAttributes.addWisdom(2);
+			break;
+		case FIGHTER : 
+			CharaAttributes.addStrength(2);
+			CharaAttributes.addVitality(2);
+			break;
+		case MAGE : 
+			CharaAttributes.addInteligence(4);
+			break;
+		case MONK : 
+			CharaAttributes.addDexterity(2);
+			CharaAttributes.addVitality(2);
+			break;
+		case PALADIN : 
+			CharaAttributes.addStrength(2);
+			CharaAttributes.addCharisma(2);
+			break;
+		case RANGER : 
+			CharaAttributes.addStrength(1);
+			CharaAttributes.addDexterity(1);
+			CharaAttributes.addWisdom(1);
+			CharaAttributes.addVitality(1);
+			break;
+		case SORCERER : 
+			CharaAttributes.addCharisma(4);
+			break;
+		case THIEF : 
+			CharaAttributes.addDexterity(4);
+			break;
+		}
+		System.out.println("Class bonuses applied.");
+	}
+	
+	public int getBonusAttributes()
+	{
+		return bonusAll;
+	}
+	
+	public static void getClassDescription(CharaJobEnum job)
+	{
+		switch(job)
+		{
+		case BARBARIAN :
+			System.out.println(CharaClassBarbarian.getClassDetail());
+			break;
+		case BARD : 
+			System.out.println(CharaClassBard.getClassDetail());
+			break;
+		case CLERIC : 
+			System.out.println(CharaClassCleric.getClassDetail());
+			break;
+		case DRUID : 
+			System.out.println(CharaClassDruid.getClassDetail());
+			break;
+		case FIGHTER :
+			System.out.println(CharaClassFighter.getClassDetail());
+			break;
+		case MAGE : 
+			System.out.println(CharaClassMage.getClassDetail());
+			break;
+		case MONK : 
+			System.out.println(CharaClassMonk.getClassDetail());
+			break;
+		case PALADIN : 
+			System.out.println(CharaClassPaladin.getClassDetail());
+			break;
+		case RANGER : 
+			System.out.println(CharaClassRanger.getClassDetail());
+			break;
+		case SORCERER : 
+			System.out.println(CharaClassSorcerer.getClassDetail());
+			break;
+		case THIEF : 
+			System.out.println(CharaClassThief.getClassDetail());
+			break;
+		}
+		//return className;
+	}
+}
