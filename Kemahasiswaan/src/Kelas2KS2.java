@@ -67,7 +67,7 @@ public class Kelas2KS2 extends Kelas{
 	}
 	public Mahasiswa getMahasiswa(int index)
 	{
-		if(mahasiswa[index] != null)
+		if(index>0 && index<=mahasiswa.length)
 		{
 			return mahasiswa[index-1];
 		}
