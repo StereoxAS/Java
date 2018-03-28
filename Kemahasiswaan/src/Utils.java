@@ -29,4 +29,24 @@ public final class Utils
 	    	//Error handling	    	
 	    }
 	}
+	
+	public static void exit()
+	{
+	    //Exit in java method
+	    try 
+	    {
+	        if (System.getProperty("os.name").contains("Windows"))
+	        {
+	        	new ProcessBuilder("cmd", "/c", "exit").inheritIO().start().waitFor();
+	        }	            
+	        else
+	        {
+	        	Runtime.getRuntime().exec("clear");
+	        }	            
+	    } 
+	    catch (IOException | InterruptedException ex)
+	    {	
+	    	//Error handling	    	
+	    }
+	}
 }
