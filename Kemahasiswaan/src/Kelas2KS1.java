@@ -72,11 +72,11 @@ public class Kelas2KS1 extends Kelas
 	{
 		if(mahasiswa[index] != null)
 		{
-			return mahasiswa[index];
+			return mahasiswa[index-1];
 		}
 		else
 		{
-			return mahasiswa[index-1];
+			return mahasiswa[0];
 		}
 		
 	}
