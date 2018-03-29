@@ -68,6 +68,7 @@ public class Kelas2KS1 extends Kelas
 			System.out.println();
 		}
 	}
+	
 	public Mahasiswa getMahasiswa(int index)
 	{
 		if(mahasiswa[index] != null)

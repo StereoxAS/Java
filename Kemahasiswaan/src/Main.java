@@ -4,8 +4,12 @@ public class Main
 {
 	public static void main(String[] args) 
 	{
-		System.out.println("STIS - Kelas	: \n");
+		Scanner scan = new Scanner(System.in);
 		Kelas2KS1 kelas = new Kelas2KS1();
-		kelas.getAllMahasiswa();
+		
+		System.out.println("STIS - Kelas	: \n");
+		//kelas.getAllMahasiswa();
+		//System.out.println(kelas.getMahasiswa(34).getNamaMahasiswa());
+		
 	}
 }

@@ -1,0 +1,8 @@
+
+public class Dosen extends Mahasiswa 
+{
+	public Dosen() 
+	{
+		// TODO Auto-generated constructor stub
+	}
+}

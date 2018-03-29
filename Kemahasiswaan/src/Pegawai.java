@@ -13,6 +13,13 @@ public class Pegawai
 		this.jabatan = jabatan;
 		this.posisi = posisi;
 	}
+	public Pegawai()
+	{
+		this.namaPegawai = "Undefined";
+		this.nip = "Undefined";
+		this.jabatan = "Undefined";
+		this.posisi = "Undefined";
+	}
 	public String getNamaPegawai()
 	{
 		return namaPegawai;

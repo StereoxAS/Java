@@ -1,0 +1,7 @@
+
+public class AccountData extends Account
+{
+	private AccountData acc[] = new AccountData[100];
+	
+	
+}

@@ -1,0 +1,8 @@
+
+public class CleaningService extends Mahasiswa 
+{	
+	public CleaningService() 
+	{
+		
+	}
+}

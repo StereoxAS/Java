@@ -1,0 +1,6 @@
+public class Mahasiswa 
+{
+	private String namaMahasiswa;
+	private String nim;
+	private String jenisKelamin;
+}

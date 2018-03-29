@@ -1,0 +1,23 @@
+
+public class AccountData extends Account
+{
+	private AccountUser acc[] = new AccountUser[100];
+	
+	public AccountData()
+	{
+		this.acc[0] = new AccountUser();
+		this.acc[0].setIdName("MrGantengMaut");
+		this.acc[0].setUserName("ganteng");
+		this.acc[0].setPassword("1234");
+	}
+
+	public AccountUser getAccOfIndex(int index)
+	{
+		return acc[index];
+	}
+
+	public void setAccOfIndex(AccountUser acc, int index)
+	{
+		this.acc[index] = acc;
+	}
+}

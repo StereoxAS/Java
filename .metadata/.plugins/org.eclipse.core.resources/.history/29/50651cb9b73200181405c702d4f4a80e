@@ -1,0 +1,31 @@
+
+public class Account
+{
+	private AccountData accountData = new AccountData();
+	private AccountUser accountUser = new AccountUser();
+	
+	public Account()
+	{
+		
+	}
+	
+	public AccountUser getAccountUser()
+	{
+		return accountUser;
+	}
+
+	public void setAccountUser(AccountUser accountUser)
+	{
+		this.accountUser = accountUser;
+	}
+
+	public AccountData getAccountData()
+	{
+		return accountData;
+	}
+
+	public void setAccountData(AccountData accountData)
+	{
+		this.accountData = accountData;
+	}
+}

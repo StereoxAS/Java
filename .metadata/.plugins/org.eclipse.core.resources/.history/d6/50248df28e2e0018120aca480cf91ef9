@@ -1,0 +1,17 @@
+
+public class Jadwal 
+{
+	private String hari;
+	private String sesi;
+	private boolean isStatus;
+	
+	public Jadwal(String hari, String sesi, boolean isStatus) 
+	{
+		super();
+		this.hari = hari;
+		this.sesi = sesi;
+		this.isStatus = isStatus;
+	}
+	
+	
+}

@@ -1,0 +1,55 @@
+
+public class Account
+{
+	
+	private AccountData accountData = new AccountData();
+	
+	public Account()
+	{
+		this.idName = " - ";
+		this.userName = " - ";
+		this.password = " - ";
+	}
+	
+	public AccountData getAccountData()
+	{
+		return accountData;
+	}
+
+	public void setAccountData(AccountData accountData)
+	{
+		this.accountData = accountData;
+	}
+
+	public Account(String idName, String userName, String password)
+	{
+		this.idName = idName;
+		this.userName = userName;
+		this.password = password;
+	}
+	
+	public String getIdName()
+	{
+		return idName;
+	}
+	public void setIdName(String idName)
+	{
+		this.idName = idName;
+	}
+	public String getUserName()
+	{
+		return userName;
+	}
+	public void setUserName(String userName)
+	{
+		this.userName = userName;
+	}
+	public String getPassword()
+	{
+		return password;
+	}
+	public void setPassword(String password)
+	{
+		this.password = password;
+	}
+}

@@ -1,0 +1,17 @@
+package KemahasiswaanSTIS;
+
+public class Kelas 
+{
+	private String namaKelas;
+	private String jurusan;
+	private int indexKelas;
+	private int jumlahOrang;
+	
+	public Kelas(String namaKelas, String jurusan, int indexKelas) 
+	{
+		this.namaKelas = namaKelas;
+		this.jurusan = jurusan;
+		this.indexKelas = indexKelas;
+	}
+	
+}

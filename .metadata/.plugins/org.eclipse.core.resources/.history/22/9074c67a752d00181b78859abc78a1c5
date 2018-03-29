@@ -1,0 +1,10 @@
+
+public class CleaningService extends Mahasiswa 
+{
+	private int lamaPengalamanKerja;
+	
+	public CleaningService() 
+	{
+		// TODO Auto-generated constructor stub
+	}
+}

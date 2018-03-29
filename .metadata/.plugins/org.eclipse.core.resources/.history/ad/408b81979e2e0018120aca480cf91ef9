@@ -1,0 +1,46 @@
+
+public class Kelas2KS1 extends Kelas
+{
+	private Mahasiswa mahasiswa[] = new Mahasiswa[35]; // jumlah mahasiswa masih static, TODO ubah ke dinamis
+
+	public Kelas2KS1()
+	{
+		this.setNamaKelas("2KS-1");
+		this.setJurusan("KS");
+		this.setJumlahOrang(35);
+		
+		
+		mahasiswa[0] = new Mahasiswa("Anton Rahmansyah Sumadi", "15.8518", enumJenisKelamin.LAKILAKI);
+		mahasiswa[1] = new Mahasiswa("Yolian Munayif Hibatullah", "15.8947", enumJenisKelamin.LAKILAKI);
+		mahasiswa[2] = new Mahasiswa("Adalard Yusuf Kamarastha", "16.8963", enumJenisKelamin.LAKILAKI);
+		mahasiswa[3] = new Mahasiswa("Adhi Candra Maulana", "16.8964", enumJenisKelamin.LAKILAKI);
+		mahasiswa[4] = new Mahasiswa("Ahmad Attaroqqi", "16.8974", enumJenisKelamin.LAKILAKI);
+		mahasiswa[5] = new Mahasiswa("Ahmad Syahid Ibnu Syarif", "16.8979", enumJenisKelamin.LAKILAKI);
+		mahasiswa[6] = new Mahasiswa("Alfian Khusnul Amar", "16.8990", enumJenisKelamin.LAKILAKI);
+		mahasiswa[7] = new Mahasiswa("Alha Ahmada Belasae", "16.8993", enumJenisKelamin.LAKILAKI);
+		mahasiswa[8] = new Mahasiswa("Anika Basa Meldion Simamora", "16.9011", enumJenisKelamin.PEREMPUAN);
+		mahasiswa[9] = new Mahasiswa("Ariel Panigori Sinaga", "16.9024", enumJenisKelamin.LAKILAKI);
+		
+		mahasiswa[9] = new Mahasiswa("Bayu Nirwana Makasuci", "16.9046", enumJenisKelamin.LAKILAKI);
+		mahasiswa[9] = new Mahasiswa("Cholifa Fitri Annisa", "16.9053", enumJenisKelamin.LAKILAKI);
+		mahasiswa[9] = new Mahasiswa("Dian Rizqi Khusnul Khotimah", "16.9079", enumJenisKelamin.LAKILAKI);
+		mahasiswa[9] = new Mahasiswa("Eka Majida Agustyani", "16.9100", enumJenisKelamin.LAKILAKI);
+		mahasiswa[9] = new Mahasiswa("Fachrunissa Azziza", "16.9110", enumJenisKelamin.LAKILAKI);
+		mahasiswa[9] = new Mahasiswa("Farhan Anshari Arsyi", "16.9124", enumJenisKelamin.LAKILAKI);
+		mahasiswa[9] = new Mahasiswa("Fenty Berliana Tifalny", "16.9137", enumJenisKelamin.LAKILAKI);
+		mahasiswa[9] = new Mahasiswa("Gamalia Gina Atmajaya", "16.9148", enumJenisKelamin.LAKILAKI);
+		mahasiswa[9] = new Mahasiswa("Ika Oktaviani Dewi Hanifah", "16.9172", enumJenisKelamin.LAKILAKI);
+		mahasiswa[9] = new Mahasiswa("Intan Eka Debora Simamora", "16.9190", enumJenisKelamin.LAKILAKI);
+	}
+
+	public Mahasiswa getMahasiswa(int index)
+	{
+		return mahasiswa[index];
+	}
+
+	public void setMahasiswa(Mahasiswa mahasiswa, int index)
+	{
+		this.mahasiswa[index] = mahasiswa;
+	}
+	
+}

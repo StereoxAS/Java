@@ -1,0 +1,4 @@
+public class Pegawai 
+{
+	private String namaPegawai;
+}

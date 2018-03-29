@@ -1,0 +1,12 @@
+
+public class AccountData extends Account
+{
+	private AccountData acc[] = new AccountData[100];
+	
+	public AccountData()
+	{
+		this.acc[0].setIdName("MrGantengMaut");
+		this.acc[0].setUserName("ganteng");
+		this.acc[0].setPassword("1234");
+	}
+}

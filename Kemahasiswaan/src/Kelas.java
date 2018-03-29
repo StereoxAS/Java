@@ -1,18 +1,32 @@
 public class Kelas 
 {
+	/*
+	 * Class parent untuk semua class Kelas
+	 */
 	private String namaKelas;
 	private String jurusan;
 	private int indexKelas;
 	private int jumlahOrang;
+	private Mahasiswa mhs = new Mahasiswa();
 	
 	public Kelas() 
 	{
-//		this.namaKelas = namaKelas;
-//		this.jurusan = jurusan;
-//		this.indexKelas = indexKelas;
-		
-		
+		//TODO auto constructor
 	}
+	
+	public Mahasiswa getMhs()
+	{
+		return mhs;
+	}
+
+
+
+	public void setMhs(Mahasiswa mhs)
+	{
+		this.mhs = mhs;
+	}
+
+
 
 	public String getNamaKelas() 
 	{

@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Main 
+{
+	String string;
+	int integer;
+	boolean bool;
+	Scanner scan = new Scanner(System.in);
+	
+	public static void main(String[] args) 
+	{
+		Mahasiswa mhs[5] = new Mahasiswa[5];
+		
+		Mahasiswa mhs1 = (Mahasiswa) mhs[0];
+		Dosen d1 = (Dosen) mhs[1];
+		CleaningService cs = (CleaningService) mhs[2];
+		
+		for(int i = 0;i<2;i++)
+		{	
+			if(mhs[i] instanceof Mahasiswa)
+			{
+				System.out.println("mhs[0] adalah Mahasiswa");
+			}
+			else if(mhs[i] instanceof Dosen)
+			{
+				System.out.println("mhs[0] adalah Dosen");
+			}
+			else if(mhs[i] instanceof CleaningService)
+			{
+				System.out.println("mhs[0] adalah CleaningService");
+			}
+		}
+		
+		
+		
+		System.out.println();
+	}
+}

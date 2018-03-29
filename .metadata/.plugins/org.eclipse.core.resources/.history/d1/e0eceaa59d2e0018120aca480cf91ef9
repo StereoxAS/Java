@@ -1,0 +1,39 @@
+
+public class Kelas2KS1 extends Kelas
+{
+	private Mahasiswa mahasiswa[] = new Mahasiswa[35]; // jumlah mahasiswa masih static, TODO ubah ke dinamis
+
+	public Kelas2KS1()
+	{
+		this.setNamaKelas("2KS-1");
+		this.setJurusan("KS");
+		this.setJumlahOrang(35);
+		
+		
+		mahasiswa[0] = new Mahasiswa("Anton Rahmansyah Sumadi", "15.8518", enumJenisKelamin.LAKILAKI);
+		mahasiswa[0] = new Mahasiswa("Yolian Munayif Hibatullah", "15.8947", enumJenisKelamin.LAKILAKI);
+		mahasiswa[0] = new Mahasiswa("Adalard Yusuf Kamarastha", "16.8963", enumJenisKelamin.LAKILAKI);
+		mahasiswa[0] = new Mahasiswa("Anton Rahmansyah Sumadi", "16.8964", enumJenisKelamin.LAKILAKI);
+		mahasiswa[0] = new Mahasiswa("Anton Rahmansyah Sumadi", "16.8974", enumJenisKelamin.LAKILAKI);
+		mahasiswa[0] = new Mahasiswa("Anton Rahmansyah Sumadi", "16.8979", enumJenisKelamin.LAKILAKI);
+		mahasiswa[0] = new Mahasiswa("Anton Rahmansyah Sumadi", "16.8990", enumJenisKelamin.LAKILAKI);
+		mahasiswa[0] = new Mahasiswa("Anton Rahmansyah Sumadi", "16.8993", enumJenisKelamin.LAKILAKI);
+		mahasiswa[0] = new Mahasiswa("Anton Rahmansyah Sumadi", "16.9011", enumJenisKelamin.LAKILAKI);
+		mahasiswa[0] = new Mahasiswa("Anton Rahmansyah Sumadi", "16.9024", enumJenisKelamin.LAKILAKI);
+		
+//		Casting
+//		Mahasiswa absen1 = (Mahasiswa) mahasiswa[0];
+//		absen1.setMahasiswa("Ganteng", "12345", enumJenisKelamin.LAKILAKI);;
+	}
+
+	public Mahasiswa getMahasiswa(int index)
+	{
+		return mahasiswa[index];
+	}
+
+	public void setMahasiswa(Mahasiswa mahasiswa, int index)
+	{
+		this.mahasiswa[index] = mahasiswa;
+	}
+	
+}
