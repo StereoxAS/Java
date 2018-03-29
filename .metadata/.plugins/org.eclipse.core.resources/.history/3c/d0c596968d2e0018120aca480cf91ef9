@@ -1,7 +1,0 @@
-package KemahasiswaanSTIS;
-
-public class Kelas 
-{
-	private String namaKelas;
-	private int indexKelas;
-}

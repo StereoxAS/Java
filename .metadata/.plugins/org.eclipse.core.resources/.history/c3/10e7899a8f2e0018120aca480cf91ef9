@@ -1,6 +1,0 @@
-
-public enum enumJenisKelamin
-{
-	LAKI-LAKI
-	PEREMPUAN;
-}

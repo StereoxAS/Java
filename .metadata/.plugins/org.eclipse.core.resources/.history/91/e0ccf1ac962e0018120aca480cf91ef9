@@ -1,6 +1,0 @@
-public class Pegawai 
-{
-	private String namaPegawai;
-	private String nip;
-	private String jabatan;
-}

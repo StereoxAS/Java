@@ -1,7 +1,0 @@
-
-public class Jadwal 
-{
-	private String hari;
-	private String sesi;
-	private boolean pendingStatus;
-}

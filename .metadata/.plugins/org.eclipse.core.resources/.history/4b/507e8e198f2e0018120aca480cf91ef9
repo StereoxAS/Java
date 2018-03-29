@@ -1,5 +1,0 @@
-public class Kuliah 
-{
-	private String mataKuliah;
-	private int jumlahSKS;
-}

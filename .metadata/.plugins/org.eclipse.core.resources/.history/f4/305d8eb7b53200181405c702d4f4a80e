@@ -1,7 +1,0 @@
-
-public class AccountUser
-{
-	private String idName;
-	private String userName;
-	private String password;
-}
