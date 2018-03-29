@@ -1,9 +1,0 @@
-
-public class CharaClassMage {
-	public void getClassDetail()
-	{
-		className = "";
-		classDesc = "";
-	}
-	
-}
