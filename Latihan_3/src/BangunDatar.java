@@ -4,12 +4,7 @@ public abstract class BangunDatar
 	private int jmlSisi;
 	private int jmlSudut;
 	private String namaBangun;
-	
-	/*
-	 * Abstract Class & Method
-	 * Abstract class cannot be constructed or created
-	 * All abstract methods must be defined in every extending classes 
-	 */
+
 	abstract double getLuas();
 	abstract double getKeliling();
 	
