@@ -3,7 +3,7 @@ public class Menu
 {
 	private String menuName;
 	private double menuPrice;
-	private Menu listMenu[] = new Menu[99];
+	private Menu listMenu[] = new Menu[24];
 
 	Menu()
 	{
@@ -13,6 +13,11 @@ public class Menu
 	{
 		this.menuName = menuName;
 		this.menuPrice = menuPrice;
+	}
+	
+	public int getMenuLength()
+	{
+		return listMenu.length;
 	}
 	public void generateMenu()
 	{
