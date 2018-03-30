@@ -1,10 +1,12 @@
 import java.util.Date;
 
+//hai semua
 public class Bill
 {
 	private Date date;
 	private double totalPrice;
 	private String billNo;
+	
 	
 	public Date getDate()
 	{
