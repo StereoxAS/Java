@@ -27,16 +27,16 @@ public class Menu
 		this.listMenu[1] = new Menu("Meat & Meat", 65455);
 		this.listMenu[2] = new Menu("Chicken BBQ", 65455);
 		this.listMenu[3] = new Menu("Chicken Pepperoni Mushroom", 65455);
-		this.listMenu[4] = new Menu("Beef Pepperoni Feast", 65455);
-		this.listMenu[5] = new Menu("Tuna Delight", 65455);
+		this.listMenu[4] = new Menu("Beef Pepperoni Feast    ", 65455);
+		this.listMenu[5] = new Menu("Tuna Delight      ", 65455);
 		
 		//Premium Pizza
 		this.listMenu[6] = new Menu("American Classic Cheeseburger", 78182);
 		this.listMenu[7] = new Menu("Italian Supreme", 78182);
-		this.listMenu[8] = new Menu("Veggie Mania", 78182);
+		this.listMenu[8] = new Menu("Veggie Mania    ", 78182);
 		this.listMenu[9] = new Menu("American All Star", 78182);
-		this.listMenu[10] = new Menu("Chicken Lovers", 78182);
-		this.listMenu[11] = new Menu("Cheese Mania", 78182);
+		this.listMenu[10] = new Menu("Chicken Lovers    ", 78182);
+		this.listMenu[11] = new Menu("Cheese Mania    ", 78182);
 		this.listMenu[12] = new Menu("Delicious Pepper Beef", 78182);
 		this.listMenu[13] = new Menu("Extravaganzza", 78182);
 		this.listMenu[14] = new Menu("Meatzza", 78182);

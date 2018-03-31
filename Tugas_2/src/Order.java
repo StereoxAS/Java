@@ -84,22 +84,34 @@ public class Order
 			//System.out.println("Menu kami ada " + newMenu.getMenuLength());
 			for (int i = 0; i < newMenu.getMenuLength()/2; i++)
 			{
-				System.out.print(i + ". " + this.newMenu.getListMenu(i).getMenuName());
-				if(newMenu.getListMenu(i).getMenuName().length() > 16 && (newMenu.getListMenu(i).getMenuName().length() <= 24))
+				if(i < 10)
 				{
-					System.out.print("\t\t\t ");
+					System.out.print("0" + i + ". " + this.newMenu.getListMenu(i).getMenuName());
 				}
-				else if(newMenu.getListMenu(i).getMenuName().length() > 24)
+				else
+				{
+					System.out.print(i + ". " + this.newMenu.getListMenu(i).getMenuName());
+				}
+				if(newMenu.getListMenu(i).getMenuName().length() > 28)
+				
 				{
 					System.out.print("\t ");
 				}
-				else if(newMenu.getListMenu(i).getMenuName().length() > 8 && newMenu.getListMenu(i).getMenuName().length() <= 16)
+				else if(newMenu.getListMenu(i).getMenuName().length() > 21 && (newMenu.getListMenu(i).getMenuName().length() <= 28))
+				{
+					System.out.print("\t\t ");
+				}
+				else if(newMenu.getListMenu(i).getMenuName().length() > 14 && newMenu.getListMenu(i).getMenuName().length() <= 21)
 				{
 					System.out.print("\t\t\t ");
 				}
-				else if(newMenu.getListMenu(i).getMenuName().length() <= 8)
+				else if(newMenu.getListMenu(i).getMenuName().length() > 7 && newMenu.getListMenu(i).getMenuName().length() <= 14)
 				{
 					System.out.print("\t\t\t\t ");
+				}
+				else if(newMenu.getListMenu(i).getMenuName().length() > 0 && newMenu.getListMenu(i).getMenuName().length() <= 7)
+				{
+					System.out.print("\t\t\t\t\t ");
 				}
 				System.out.println(i+newMenu.getMenuLength()/2 + ". " + newMenu.getListMenu(i+newMenu.getMenuLength()/2).getMenuName());
 			}
