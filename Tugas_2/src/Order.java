@@ -5,7 +5,11 @@ public class Order
 	private Menu orderQueue[] = new Menu[99];
 	private Bill newBill = new Bill();
 	private Menu newMenu = new Menu();
+	private Staff newStaff = new Staff();
+	
+	private String listOrder[];
 	private String string = "Ya";
+	private int counter = 0;
 	private int pilihan = 0;
 	private int questionChoice = 0;
 	Scanner scan = new Scanner(System.in);
@@ -69,9 +73,9 @@ public class Order
 	{
 		// TODO Auto-generated method stub
 		newMenu.generateMenu();
-		System.out.println("Selamat datang di Domino's Pizza\n\n");
-		
-		System.out.println("Ada yang bisa saya bantu ?");
+	
+		System.out.println(newStaff.getStaff().getStaffName() + "	: Selamat datang di Domino's Pizza\n"
+															  + "	  Ada yang bisa saya bantu ?\n");
 		System.out.println("1. Saya mau pesan\n"
 						 + "2. Saya tidak mau pesan\n"
 						 + "3. Ini apa ya ?\n"
@@ -80,8 +84,7 @@ public class Order
 		questionChoice = this.scan.nextInt();
 		if(questionChoice == 1)
 		{
-			System.out.println("Silakan pilih menu yang anda mau\n");
-			//System.out.println("Menu kami ada " + newMenu.getMenuLength());
+			System.out.println("\n" + newStaff.getStaff().getStaffName() + "	: Silakan pilih menu yang anda mau\n");
 			for (int i = 0; i < newMenu.getMenuLength()/2; i++)
 			{
 				if(i < 10)
@@ -115,13 +118,28 @@ public class Order
 				}
 				System.out.println(i+newMenu.getMenuLength()/2 + ". " + newMenu.getListMenu(i+newMenu.getMenuLength()/2).getMenuName());
 			}
+			System.out.println();
 			while(!this.string.equalsIgnoreCase("Tidak"))
 			{
+				System.out.print(" : ");
 				this.pilihan = scan.nextInt();
 				this.newOrder(pilihan);	
-				System.out.print("Ada lagi [Ya / Tidak]? "); 
+				
+				System.out.println("\n" + newStaff.getStaff().getStaffName() + "	: Ada lagi [Ya / Tidak]? \n");
+				System.out.print(" : ");
 				this.string = scan.next();				
 			}
+			
+			/* TODO stub function
+			System.out.println("\n" + newStaff.getStaff().getStaffName() + "	: Silakan di cek kembali pesanan Anda \n");
+			for (int i = 0; i < listOrder.length; i++)
+			{
+				if(!listOrder[i].isEmpty())
+				{
+					System.out.println(i + ". " +  listOrder[i]);
+				}
+			}
+			*/
 		}
 		else if(questionChoice == 2)
 		{

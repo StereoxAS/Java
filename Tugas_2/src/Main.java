@@ -24,6 +24,6 @@ public class Main
 	}
 	public static void getRestaurantDetails()
 	{
-		System.out.println(Main.dominos.getPropertyName() + " " +  Main.dominos.getBranch() + "\n" +  Main.dominos.getBranchAddress());
+		System.out.println(Main.dominos.getPropertyName() + " " +  Main.dominos.getBranchName() + "\n" +  Main.dominos.getbAddress());
 	}
 }
