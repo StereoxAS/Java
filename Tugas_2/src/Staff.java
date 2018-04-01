@@ -4,8 +4,7 @@ public class Staff
 {
     public String staffNo;
     public String staffName;
-    
-    Date date = new Date();
+    public Date date = new Date();
     
     @SuppressWarnings("deprecation")
 	public int getCurrentHour()
