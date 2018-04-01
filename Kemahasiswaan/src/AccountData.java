@@ -13,6 +13,7 @@ public class AccountData //extends Account
 	public AccountData() 
 	{	
 		total = 3;
+		//						acc		pass			username
 		admin[0] = new Account("ibnoe","celalucendiri","The Dark Knight");
 		admin[1] = new Account("satriatama","fentybeauty","Sang Dewa Biru");
 		admin[2] = new Account("alfian","khunsnul","Alfian si Programmer");
