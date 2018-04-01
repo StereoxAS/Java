@@ -1,3 +1,4 @@
+
 public class Pegawai implements PegawaiInterface
 {	
 	protected String namaPegawai = "Undefined";
@@ -6,14 +7,19 @@ public class Pegawai implements PegawaiInterface
 	protected String posisi = "Undefined";
 	protected String spesialisasi = "Undefined";
 	
-	public Pegawai(String namaPegawai, String nip, String jabatan, String posisi)
+	public Pegawai() {
+		
+	}
+	
+	public Pegawai(String namaPegawai, String nip, String posisi)
 	{
 		super();
 		this.namaPegawai = namaPegawai;
 		this.nip = nip;
-		this.jabatan = jabatan;
+		this.jabatan = "jabatan";
 		this.posisi = posisi;
 	}
+
 	public Pegawai()
 	{
 		
