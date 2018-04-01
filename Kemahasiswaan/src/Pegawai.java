@@ -1,18 +1,25 @@
-public class Pegawai 
+public abstract class Pegawai 
 {
 	private String namaPegawai;
 	private String nip;
 	private String jabatan;
 	private String posisi;
 	
-	public Pegawai(String namaPegawai, String nip, String jabatan, String posisi)
+	public Pegawai() {
+		
+	}
+	
+	public Pegawai(String namaPegawai, String nip, String posisi)
 	{
 		super();
 		this.namaPegawai = namaPegawai;
 		this.nip = nip;
-		this.jabatan = jabatan;
+		this.jabatan = "jabatan";
 		this.posisi = posisi;
 	}
+	
+	abstract void getAllPegawai();
+	
 	public String getNamaPegawai()
 	{
 		return namaPegawai;
