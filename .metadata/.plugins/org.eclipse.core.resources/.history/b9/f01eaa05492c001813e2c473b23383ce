@@ -1,7 +1,0 @@
-
-public class ProductFaceBeauty 
-{
-	private String nameTag;
-	private String descTag;
-	private int priceTag;
-}

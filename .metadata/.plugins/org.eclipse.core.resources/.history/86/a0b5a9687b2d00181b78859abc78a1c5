@@ -1,9 +1,0 @@
-
-public class CleaningService extends Mahasiswa 
-{	
-	private int pengalamanKerja;
-	public CleaningService() 
-	{
-		
-	}
-}

@@ -2,6 +2,13 @@ import java.util.Scanner;
 
 public class Main 
 {
+	/*
+	 * Inheritance
+	 * 
+	 * Parent class extended by Child class
+	 * Inherited classes can be constructed from Parent
+	 * ex : Mahasiswa mhs = new Dosen();
+	 */
 	String string;
 	int integer;
 	boolean bool;

@@ -2,6 +2,7 @@ import java.io.IOException;
 
 /**
  * Semua fungsi macem2 ke sini 
+ * Credit : stackoverflow, krishna aji, anton r s, syahid ibnu
  */
 public final class Utils
 {

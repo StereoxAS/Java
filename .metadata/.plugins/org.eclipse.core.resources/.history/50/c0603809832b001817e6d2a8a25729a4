@@ -1,8 +1,0 @@
-
-public class Selection 
-{
-	public static void getGameChoiceList()
-	{
-		
-	}
-}
