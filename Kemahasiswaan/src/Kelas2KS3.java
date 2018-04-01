@@ -27,7 +27,9 @@ public class Kelas2KS3 extends Kelas{
 		mahasiswa[16] = new Mahasiswa("Luqman Ismail Abdurrahim", "16.9241", enumJenisKelamin.PEREMPUAN);
 		mahasiswa[17] = new Mahasiswa("M. Rizqi Bahar", "16.9249", enumJenisKelamin.LAKILAKI);
 		mahasiswa[18] = new Mahasiswa("Meidian Rinaldi", "16.9268", enumJenisKelamin.LAKILAKI);
+
 		mahasiswa[19] = new Mahasiswa("Muarrikh Yazka Ginang P.", "16.9281", enumJenisKelamin.LAKILAKI);
+
 		                                  
 		mahasiswa[20] = new Mahasiswa("Muhammad Alifunnas", "16.9289", enumJenisKelamin.LAKILAKI);
 		mahasiswa[21] = new Mahasiswa("Muhammad Hadid", "16.9294", enumJenisKelamin.LAKILAKI);
@@ -48,7 +50,6 @@ public class Kelas2KS3 extends Kelas{
 		
 		
 	}
-	
 	
 	public void getAllMahasiswa()
 	{
