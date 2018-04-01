@@ -52,8 +52,4 @@ public class PegawaiDosen extends Pegawai
 	public void setIdDosen(String idDosen) {
 		this.idDosen = idDosen;
 	}
-	
-	
-	
-	
 }

@@ -1,9 +1,0 @@
-
-public class CharaClassPaladin 
-{
-	public void getClassDetail()
-	{
-		className = "";
-		classDesc = "";
-	}
-}

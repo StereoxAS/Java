@@ -1,8 +1,0 @@
-
-public class Cart 
-{
-	private int totalPrice;
-	private int currentPrice;
-	
-	
-}

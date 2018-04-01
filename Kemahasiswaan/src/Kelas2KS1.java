@@ -5,6 +5,7 @@ public class Kelas2KS1 extends Kelas
 
 	public Kelas2KS1()
 	{
+	
 		this.setNamaKelas("2KS-1");
 		this.setJurusan("KS");
 		this.setJumlahOrang(35);
@@ -53,21 +54,36 @@ public class Kelas2KS1 extends Kelas
 	public void getAllMahasiswa()
 	{
 		System.out.println("\nDaftar mahasiswa " + this.toString() + "\n");
+		
+		System.out.println("|\tNama\t\t\t|   NIM\t| Jenis Kelamin|");
+		
 		for (int index = 0; index < mahasiswa.length; index++)
 		{	
 			if(mahasiswa[index] != null)
 			{
-				System.out.println("Nama		: " + mahasiswa[index].getNamaMahasiswa());
-				System.out.println("NIM		: " + mahasiswa[index].getNim());
-				System.out.println("Jenis Kelamin	: " + mahasiswa[index].getJenisKelamin().toString());
+				System.out.print("|");
+				if(mahasiswa[index].getNamaMahasiswa().length()>=23) {
+					System.out.print(mahasiswa[index].getNamaMahasiswa()+ "\t");
+				}else if (mahasiswa[index].getNamaMahasiswa().length()>=15) {
+					System.out.print(mahasiswa[index].getNamaMahasiswa()+ "\t\t");
+				}else if (mahasiswa[index].getNamaMahasiswa().length()>=7) {
+					System.out.print(mahasiswa[index].getNamaMahasiswa()+ "\t\t\t");
+				}else if (mahasiswa[index].getNamaMahasiswa().length()>=2) {
+					System.out.print(mahasiswa[index].getNamaMahasiswa()+ "\t\t\t\t");
+				}
+				
+				System.out.println("|  "+ mahasiswa[index].getNim() + "\t\t| "
+								+  mahasiswa[index].getJenisKelamin()+"\t|" );
+				
 			}
 			else
 			{
 				System.out.println("\nEnd of line.");
 			}
-			System.out.println();
+			
 		}
 	}
+	
 	public Mahasiswa getMahasiswa(int index)
 	{
 		if(index>0 && index<=mahasiswa.length)

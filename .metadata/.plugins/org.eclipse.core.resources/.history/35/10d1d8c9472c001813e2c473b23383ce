@@ -1,9 +1,0 @@
-
-public class Product 
-{
-	private String eye;
-	private String face;
-	private String lip;
-	
-	
-}

@@ -1,8 +1,0 @@
-
-public class CharaClassDruid extends CharaClass {
-	public void getClassDetail()
-	{
-		className = "Druid";
-		classDesc = "";
-	}
-}

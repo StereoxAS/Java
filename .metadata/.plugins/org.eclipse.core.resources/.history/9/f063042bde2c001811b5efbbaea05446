@@ -1,9 +1,0 @@
-public class Checkout 
-{
-	private String uang;
-	private int total;
-	private int total2;
-	
-	
-	
-}
