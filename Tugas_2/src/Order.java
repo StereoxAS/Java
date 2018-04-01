@@ -16,6 +16,7 @@ public class Order
 	
 	Order()
 	{
+		// TODO create new Bill for each Order created
 		this.newBill.setTotalPrice(0);
 	}
 	public void newOrder(int menuChoice)
