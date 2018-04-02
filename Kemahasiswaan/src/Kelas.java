@@ -1,4 +1,4 @@
-public class Kelas 
+public abstract class Kelas 
 {
 	/*
 	 * Class parent untuk semua class Kelas
@@ -13,6 +13,10 @@ public class Kelas
 	{
 		//TODO auto constructor
 	}
+	
+	//getAllMahasiswa berbeda untuk tiap Kelas
+	//TODO buat getAllMahasiswa() generic untuk tiap Kelas
+	public abstract void getAllMahasiswa(); 
 	
 	public Mahasiswa getMhs()
 	{
