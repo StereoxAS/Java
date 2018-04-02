@@ -19,7 +19,11 @@ public class Kelas
 		return mhs;
 	}
 
-
+	@Override
+	public String toString()
+	{
+		return this.namaKelas;
+	}
 
 	public void setMhs(Mahasiswa mhs)
 	{
