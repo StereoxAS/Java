@@ -1,28 +1,29 @@
-public class Pegawai 
-{
-	private String namaPegawai;
-	private String nip;
-	private String jabatan;
-	private String posisi;
+
+public class Pegawai implements PegawaiInterface
+{	
+	protected String namaPegawai = "Undefined";
+	protected String nip = "Undefined";
+	protected String jabatan = "Undefined";
+	protected String posisi = "Undefined";
+	protected String spesialisasi = "Undefined";
 	
-	public Pegawai(String namaPegawai, String nip, String jabatan, String posisi)
+	public Pegawai(String namaPegawai, String nip, String posisi)
 	{
 		super();
 		this.namaPegawai = namaPegawai;
 		this.nip = nip;
-		this.jabatan = jabatan;
+		this.jabatan = "jabatan";
 		this.posisi = posisi;
 	}
+
 	public Pegawai()
 	{
-		this.namaPegawai = "Undefined";
-		this.nip = "Undefined";
-		this.jabatan = "Undefined";
-		this.posisi = "Undefined";
+		String string = new String();
+		String string2 = "aduh";
 	}
 	public String getNamaPegawai()
 	{
-		return namaPegawai;
+		return this.namaPegawai;
 	}
 	public void setNamaPegawai(String namaPegawai)
 	{
@@ -30,7 +31,7 @@ public class Pegawai
 	}
 	public String getNip()
 	{
-		return nip;
+		return this.nip;
 	}
 	public void setNip(String nip)
 	{
@@ -38,7 +39,7 @@ public class Pegawai
 	}
 	public String getJabatan()
 	{
-		return jabatan;
+		return this.jabatan;
 	}
 	public void setJabatan(String jabatan)
 	{
@@ -46,11 +47,22 @@ public class Pegawai
 	}
 	public String getPosisi()
 	{
-		return posisi;
+		return this.posisi;
 	}
 	public void setPosisi(String posisi)
 	{
 		this.posisi = posisi;
+	}
+	
+	@Override
+	public void getDataPegawai()
+	{
+		// TODO Auto-generated method stub
+		System.out.println("Nama		: " + getNamaPegawai());
+		System.out.println("NIP		: " + getNip());
+		System.out.println("Jabatan		: " + getJabatan());
+		System.out.println("Posisi		: " + getPosisi());
+		System.out.println("Institusi	:" + Pegawai.institusi);
 	}
 	
 	

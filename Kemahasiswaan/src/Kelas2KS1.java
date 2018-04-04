@@ -5,6 +5,7 @@ public class Kelas2KS1 extends Kelas
 
 	public Kelas2KS1()
 	{
+	
 		this.setNamaKelas("2KS-1");
 		this.setJurusan("KS");
 		this.setJumlahOrang(35);
@@ -49,24 +50,48 @@ public class Kelas2KS1 extends Kelas
 		mahasiswa[33] = new Mahasiswa("Rozan Fikri", "16.9404", enumJenisKelamin.LAKILAKI);
 		mahasiswa[34] = new Mahasiswa("Todo Parulian Simbolon", "16.9450", enumJenisKelamin.LAKILAKI);
 	}
-	
+		
 	public void getAllMahasiswa()
 	{
 		System.out.println("\nDaftar mahasiswa " + this.toString() + "\n");
+		
+		System.out.println("-------------------------------------------------------------------------");
+		System.out.println("| NO |\tNama\t\t\t\t|   NIM\t\t| Jenis Kelamin |");
+		System.out.println("-------------------------------------------------------------------------");
+		
 		for (int index = 0; index < mahasiswa.length; index++)
 		{	
+			int a=index+1;
+			
+			if(index<9) {
+				System.out.print("|  " + a + " | ");
+			} else {
+				System.out.print("| " + a + " | ");
+			}
+			
 			if(mahasiswa[index] != null)
 			{
-				System.out.println("Nama		: " + mahasiswa[index].getNamaMahasiswa());
-				System.out.println("NIM		: " + mahasiswa[index].getNim());
-				System.out.println("Jenis Kelamin	: " + mahasiswa[index].getJenisKelamin().toString());
+				if(mahasiswa[index].getNamaMahasiswa().length()>=25) {
+					System.out.print(mahasiswa[index].getNamaMahasiswa()+ "\t");
+				}else if (mahasiswa[index].getNamaMahasiswa().length()>=17) {
+					System.out.print(mahasiswa[index].getNamaMahasiswa()+ "\t\t");
+				}else if (mahasiswa[index].getNamaMahasiswa().length()>=9) {
+					System.out.print(mahasiswa[index].getNamaMahasiswa()+ "\t\t\t");
+				}else if (mahasiswa[index].getNamaMahasiswa().length()>=4) {
+					System.out.print(mahasiswa[index].getNamaMahasiswa()+ "\t\t\t\t");
+				}
+				
+				System.out.println("|  "+ mahasiswa[index].getNim() + "\t| "
+								+  mahasiswa[index].getJenisKelamin()+"\t|" );
+				
 			}
 			else
 			{
 				System.out.println("\nEnd of line.");
 			}
-			System.out.println();
+			
 		}
+		System.out.println("-------------------------------------------------------------------------");
 	}
 	
 	public Mahasiswa getMahasiswa(int index)
