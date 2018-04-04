@@ -1,4 +1,3 @@
-
 public class Menu
 {
 	private String menuName;
@@ -81,3 +80,4 @@ public class Menu
 		this.menuPrice = menuPrice;
 	}
 }
+
