@@ -1,10 +1,9 @@
 import java.util.Date;
 
-//hai semua
 public class Bill
 {
 	private Date date;
-	private double totalPrice;
+	private double totalPrice = 0;
 	private String billNo;
 	
 	
