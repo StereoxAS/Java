@@ -7,7 +7,7 @@ public class Menu
 
 	Menu()
 	{
-		//this.listMenu[1].setMenuName("Meat & Meat");
+		this.generateMenu();
 	}
 	Menu(String menuName, double menuPrice)
 	{

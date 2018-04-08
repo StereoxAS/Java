@@ -17,7 +17,7 @@ public class Main
 		
 		while(true)
 		{
-			Utils.clrscr();
+			//Utils.clrscr();
 			order.getOrder();
 		}
 		//System.out.println("Totalnya jadi Rp" + order.getNewBill().getTotalPrice());
