@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 public class HalamanLogin {
 	
-	public static void Login() {
+	public static void Login() 
+	{
 		Utils.clrscr();
 		int i,index;
 		String temp1,temp2;
@@ -24,7 +25,8 @@ public class HalamanLogin {
 			}
 		}
 		
-		if(index==99) {
+		if(index == 99) 
+		{
 			System.out.println("\t Username tidak terdaftar");
 			HalamanAwal.getHalamanAwal(2);
 		}
@@ -49,6 +51,6 @@ public class HalamanLogin {
 		}
 		
 		sc.nextLine();
-		//sc.close();		
+		sc.close();		
 	}
 }
