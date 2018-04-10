@@ -16,7 +16,6 @@ public class Order
 	
 	Order()
 	{
-		// TODO create new Bill for each Order created
 		this.newBill.setTotalPrice(0);
 	}
 	public void newOrder(int menuChoice)
@@ -134,7 +133,7 @@ public class Order
 					this.pilihan = Integer.valueOf(string);
 					this.newOrder(pilihan);
 					this.listOrder[counter] = newMenu.getListMenu(pilihan).getMenuName();
-					counter++; System.out.println("Counter is now " + counter);
+					counter++; System.out.println("Jumlah pesanan saat ini: " + counter);
 					System.out.println("\n" + newStaff.getStaff().getStaffName() + "	: Ada lagi [Ketik 'Tidak' untuk tidak]? \n");
 				}
 			}
