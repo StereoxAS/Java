@@ -58,6 +58,7 @@ public class HalamanAwal
 			Utils.exit();
 		}
 		sc.nextLine();
+		HalamanAwal.getMenu();
 		sc.close();
 	}
 }
