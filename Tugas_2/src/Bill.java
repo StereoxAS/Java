@@ -1,5 +1,11 @@
+package tugas2;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
+
+
 
 public class Bill
 {
@@ -11,15 +17,27 @@ public class Bill
 	
 	public void getBill(String[] string)
 	{
-		Utils.clrscr();
+		//Utils.clrscr();
 		//belum dinamis
 		qty = Utils.calcQuantity(string);
-		System.out.println("\t\t\t\tDomino's Pizza");
-		System.out.println("\t\tJl. Otto Iskandar Dinata No.151 Jatinegara");
-		System.out.println("\n\n "
-						 + "=========================================================================\n"
-						 + "                Menu                 | Qty |            Price            ");
+                 
+		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+		Date date = new Date();
+		Customer cust = new Customer();
+		Staff staff = new Staff();
 		
+        System.out.println("\t\t\t\t   Dine-In");
+        System.out.println("\t\t\t\t     PAID ");
+        System.out.println("\t\t\t\tDomino's Pizza");
+	System.out.println();
+	System.out.println(dateFormat.format(date));
+	System.out.println("Reserved by " + cust.getCustomerName());
+	System.out.println("Server : "+ staff.getStaff().getStaffName());
+	System.out.println("-------------------------------------------------------------------------");
+	System.out.println("\t\tJl. Otto Iskandar Dinata No.151 Jatinegara");
+	System.out.println("\t\t\t\tTax invoice");
+	System.out.println("=========================================================================\n"
+			 + "                Menu                 | Qty |            Price            ");
 		try
 		{
 			for (int i = 0; i < string.length-1; i++)
@@ -66,6 +84,8 @@ public class Bill
 			e.getMessage();
 			System.out.println("\nERROR: Null Pointer Exception.");
 		}
+                System.out.println("-------------------------------------------------------------------------");
+                System.out.println("\t\t\t     www.dominos.co.id");
 		scan.nextLine();
 	}
 	
