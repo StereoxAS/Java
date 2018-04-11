@@ -1,11 +1,22 @@
 
+import java.util.Scanner;
+
+
 public class Customer
 {
 	private String customerName;
 	private String customerID;
 	private String customerOrder;
-	
-	
+        public String p;
+        
+        Scanner scan = new Scanner(System.in);
+     
+        public void inputNama(){
+            System.out.println("Pesanan dibuat atas nama ");
+            p = scan.nextLine();
+            setCustomerName(p);
+        }
+        
 	public String getCustomerName()
 	{
 		return customerName;
