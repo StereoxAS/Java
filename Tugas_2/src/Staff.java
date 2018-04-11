@@ -1,5 +1,7 @@
 import java.util.Date;
-
+/*
+ * Finished
+ */
 public class Staff 
 {
     public String staffNo;

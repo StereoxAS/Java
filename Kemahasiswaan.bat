@@ -1,3 +1,3 @@
-cd /d %~dp0/Kemahasiswaan/bin/
+cd /d %~dp0/bin/
 java Main
 cmd.exe
