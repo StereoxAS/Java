@@ -6,6 +6,7 @@ public class MenuOption
 	static Staff staves = new Staff();
 	static Scanner scan = new Scanner(System.in);
 	
+	
 	public static void getMenuOption()
 	{
 		System.out.println(staves.getStaff().getStaffName() + "	: \tSelamat datang di Domino's Pizza\n"
@@ -15,6 +16,7 @@ public class MenuOption
 						 + "3. Ini apa ya ?\n"
 						 + "4. Saya ingin pulang\n");
 		System.out.print(" : ");
+		displayMenu(scan.nextInt());
 	}
 	
 	public static void viewMenu()
@@ -55,11 +57,11 @@ public class MenuOption
 		System.out.println();
 	}
 	
-	public static void displayMenu()
+	public static void displayMenu(int x)
 	{	
-		int x;
 		listMenu.generateMenu();
-		x = scan.nextInt();
+		int pilihan = x;
+		String string;
 		if(x == 1)
 		{
 			System.out.println("\n" + staves.getStaff().getStaffName() + "	: Silakan pilih menu yang anda mau\n");
@@ -102,7 +104,6 @@ public class MenuOption
 		else if(x == 4)
 		{
 			Utils.exit();
-		}
 		}
 	}
 }

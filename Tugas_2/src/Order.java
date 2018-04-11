@@ -5,7 +5,9 @@ public class Order
 	private Menu orderQueue[] = new Menu[99];
 	private Bill newBill = new Bill();
 	private Menu newMenu = new Menu();
+	private Payment payment = new Payment();
 
+	
 	Scanner scan = new Scanner(System.in);
 	
 	Order()
@@ -43,7 +45,13 @@ public class Order
 		newMenu.generateMenu();
 	
 		MenuOption.getMenuOption();
-		
-		
+	}
+	public Payment getPayment()
+	{
+		return payment;
+	}
+	public void setPayment(Payment payment)
+	{
+		this.payment = payment;
 	}
 }

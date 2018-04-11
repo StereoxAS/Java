@@ -3,6 +3,7 @@ public class Menu
 	private String menuName;
 	private double menuPrice;
 	private Menu listMenu[] = new Menu[99];
+	
 
 	Menu()
 	{

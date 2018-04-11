@@ -1,28 +1,25 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class test
 {
 	public static void main(String[] args)
 	{
-		int x;
-		Menu menu = new Menu();
-		menu.generateMenu();
-		try
-		{
-			System.out.println("Menu ke-1 adalah " + menu.getListMenu()[1].getMenuName());
-			System.out.println("Menu kosong ada pada index : " + menu.getFirstEmptyMenu());
-//			x = menu.getFirstEmptyMenu();
-//			menu.setEmptyMenu(x);
-			menu.addMenu("Ganteng", 420);
-//			System.out.println(menu.getListMenu().length);
-//			
-			System.out.println("23 : " + menu.getListMenu()[23].getMenuName());
-			System.out.println("24 : " + menu.getListMenu()[24].getMenuName());
-		}
-		catch (Exception e)
-		{
-			// TODO Auto-generated catch block
-			e.getMessage();
-			System.out.println("\nERROR: Unhandled Exception. ");
-		}
+		double x = 2.75;
+		double y = 3.75;
+		double z = 2.25;
+		double total = 0;
 		
+		List<Double> bill = new ArrayList<Double>();
+		
+		bill.add(x);
+		bill.add(y);
+		bill.add(z);
+		
+		for (int i = 0; i < bill.size(); i++)
+	    {
+		   total += bill.get(i);
+	    }
+		System.out.println("Total : " + total);
 	}
 }
