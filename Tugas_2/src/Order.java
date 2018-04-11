@@ -7,7 +7,7 @@ public class Order
 	private Menu newMenu = new Menu();
 	private Staff newStaff = new Staff();
 	
-	private String listOrder[];
+	private String listOrder[] = new String[99];
 	private String string = "Ya";
 	private int counter = 0;
 	private int pilihan = 0;
@@ -16,12 +16,11 @@ public class Order
 	
 	Order()
 	{
-		// TODO create new Bill for each Order created
 		this.newBill.setTotalPrice(0);
 	}
 	public void newOrder(int menuChoice)
 	{
-		newMenu.generateMenu();
+		newMenu.generateMenu(); //menampilkan list menu-menu
 		switch(menuChoice)
 		{
 			case 1 :  newBill.setTotalPrice(newBill.getTotalPrice() + newMenu.getListMenu(menuChoice).getMenuPrice());
@@ -61,14 +60,14 @@ public class Order
 		this.newBill = newBill;
 	}
 
-	public Menu getOrderQueue(int index)
+	public Menu[] getOrderQueue()
 	{
-		return orderQueue[index];
+		return orderQueue;
 	}
 
-	public void setOrderQueue(Menu orderQueue, int index)
+	public void setOrderQueue(Menu[] orderQueue)
 	{
-		this.orderQueue[index] = orderQueue;
+		this.orderQueue = orderQueue;
 	}
 	public void getOrder()
 	{
@@ -120,32 +119,32 @@ public class Order
 				System.out.println(i+newMenu.getMenuLength()/2 + ". " + newMenu.getListMenu(i+newMenu.getMenuLength()/2).getMenuName());
 			}
 			System.out.println();
-			while(!this.string.equalsIgnoreCase("Tidak"))
-			{
-				System.out.print(" : ");
-				this.pilihan = scan.nextInt();
-				this.newOrder(pilihan);	
-				
-				System.out.println("\n" + newStaff.getStaff().getStaffName() + "	: Ada lagi [Ya / Tidak]? \n");
-				System.out.print(" : ");
-				this.string = scan.next();				
-			}
 			
-			/* TODO stub function
-			System.out.println("\n" + newStaff.getStaff().getStaffName() + "	: Silakan di cek kembali pesanan Anda \n");
-			for (int i = 0; i < listOrder.length; i++)
+			while(this.pilihan >= 0)
 			{
-				if(!listOrder[i].isEmpty())
+				System.out.print(" : ");
+				this.string = scan.next();
+				if(string.equalsIgnoreCase("Tidak"))
 				{
-					System.out.println(i + ". " +  listOrder[i]);
+					this.pilihan = -1;
+				}
+				else
+				{
+					this.pilihan = Integer.valueOf(string);
+					this.newOrder(pilihan);
+					this.listOrder[counter] = newMenu.getListMenu(pilihan).getMenuName();
+					counter++; System.out.println("Jumlah pesanan saat ini: " + counter);
+					System.out.println("\n" + newStaff.getStaff().getStaffName() + "	: Ada lagi [Ketik 'Tidak' untuk tidak]? \n");
 				}
 			}
-			*/
+			System.out.println("\n" + newStaff.getStaff().getStaffName() + "	: Silakan di cek kembali pesanan Anda \n");
+			newBill.getBill(listOrder);
+			scan.nextLine();
 		}
 		else if(questionChoice == 2)
 		{
 			System.out.println("Tolong anda pergi dari sini sekarang juga.");
-			this.scan.next();
+			this.scan.nextLine();
 			Utils.exit();
 		}
 		else if(questionChoice == 3)
@@ -153,7 +152,7 @@ public class Order
 			System.out.println("Selamat datang di Domino's Pizza\n"
 							 + "Anda sekarang ada di ");
 			Main.getRestaurantDetails();
-			this.scan.next();
+			this.scan.nextLine();
 		}
 		else if(questionChoice == 4)
 		{

@@ -6,6 +6,9 @@ import java.io.IOException;
  */
 public final class Utils
 {
+	private static String listOrder[] = new String[24];
+	private static int listQty[] = new int[24];
+	
 	public static String capitalizeFirstChar(String string)
 	{
 		return string.substring(0, 1).toUpperCase() + string.substring(1).toLowerCase();
@@ -49,5 +52,51 @@ public final class Utils
 	    {	
 	    	//Error handling	    	
 	    }
+	}
+	
+	public static int[] calcQuantity(String string[])
+	{
+		//reset quantity
+		for (int i = 0; i < listQty.length; i++)
+		{
+			listQty[i] = 0;
+		}
+		
+		listOrder[0] = "Double Beef Burger";
+		listOrder[1] = "Meat & Meat";
+		listOrder[2] = "Chicken BBQ";
+		listOrder[3] = "Chicken Pepperoni Mushroom";
+		listOrder[4] = "Beef Pepperoni Feast    ";
+		listOrder[5] = "Tuna Delight      ";
+		listOrder[6] = "American Classic Cheeseburger";
+		listOrder[7] = "Italian Supreme";
+		listOrder[8] = "Veggie Mania    ";
+		listOrder[9] = "American All Star";
+		listOrder[10] = "Chicken Lovers    ";
+		listOrder[11] = "Cheese Mania    ";
+		listOrder[12] = "Delicious Pepper Beef";
+		listOrder[13] = "Extravaganzza";
+		listOrder[14] = "Meatzza";
+		listOrder[15] = "Beef Delight";
+		listOrder[16] = "Cheesy Sausage";
+		listOrder[17] = "Chicken Pepperoni Feast";
+		listOrder[18] = "Margherita";
+		listOrder[19] = "Sambal Beef";
+		listOrder[20] = "Veggie Delight";
+		listOrder[21] = "Chicken Rasher";
+		listOrder[22] = "Pepper Chicken";
+		listOrder[23] = "Beef Rasher";
+		
+		for (int i = 0; i < string.length; i++)
+		{
+			for (int j = 0; j < listOrder.length; j++)
+			{
+				if(string[i] == listOrder[j])
+				{
+					listQty[j] += 1;
+				}				
+			}
+		}
+		return listQty;
 	}
 }

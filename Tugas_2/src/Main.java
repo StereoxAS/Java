@@ -15,11 +15,27 @@ public class Main
 		Order order = new Order();
 		Utils.clrscr();
 		
-		while(true)
+		try
 		{
-			Utils.clrscr();
-			order.getOrder();
+			while(true)
+			{
+				//Utils.clrscr();
+				order.getOrder();
+			}
+		} 
+		catch (ArrayIndexOutOfBoundsException e)
+		{
+			System.out.println("ERROR : Array index out of bound. Application is terminating.");
+			scan.nextLine();
+			Utils.exit();
 		}
+		catch (NullPointerException e)
+		{
+			System.out.println("ERROR : Null Pointer exception. Application is terminating.");
+			scan.nextLine();
+			Utils.exit();
+		}
+		
 		//System.out.println("Totalnya jadi Rp" + order.getNewBill().getTotalPrice());
 	}
 	public static void getRestaurantDetails()

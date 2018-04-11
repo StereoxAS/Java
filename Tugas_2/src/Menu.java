@@ -2,11 +2,11 @@ public class Menu
 {
 	private String menuName;
 	private double menuPrice;
-	private Menu listMenu[] = new Menu[24];
+	private Menu listMenu[] = new Menu[99];
 
 	Menu()
 	{
-		//this.listMenu[1].setMenuName("Meat & Meat");
+		this.generateMenu();
 	}
 	Menu(String menuName, double menuPrice)
 	{
@@ -18,6 +18,24 @@ public class Menu
 	{
 		return listMenu.length;
 	}
+	
+	public int getEmptyMenu()
+	{
+		for (int i = 0; i < listMenu.length; i++)
+		{
+			if(listMenu[i].getMenuName().equals(null))
+			{
+				return i;
+			}
+			else
+			{
+				System.out.println("Daftar menu sudah penuh.");
+				break;
+			}
+		}
+		return listMenu.length;
+	}
+	
 	public void generateMenu()
 	{
 		//this.listMenu = new Menu[jmlMenu];
@@ -54,14 +72,19 @@ public class Menu
 		this.listMenu[23] = new Menu("Beef Rasher", 14091);
 	}
 	
-	public Menu getListMenu(int index)
+	public void addMenu(String menuName, int price)
 	{
-		return listMenu[index];
+		this.listMenu[listMenu.] =
+	}
+	
+	public Menu[] getListMenu()
+	{
+		return listMenu;
 	}
 
-	public void setListMenu(Menu listMenu, int index)
+	public void setListMenu(Menu[] listMenu)
 	{
-		this.listMenu[index] = listMenu;
+		this.listMenu = listMenu;
 	}	
 	public String getMenuName()
 	{
@@ -80,4 +103,3 @@ public class Menu
 		this.menuPrice = menuPrice;
 	}
 }
-

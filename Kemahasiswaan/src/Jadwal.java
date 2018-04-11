@@ -12,7 +12,7 @@ public class Jadwal
 		this.sesi = sesi;
 		this.pending = pending;
 	}
-
+	
 	public String getHari()
 	{
 		return hari;
