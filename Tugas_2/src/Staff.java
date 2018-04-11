@@ -22,7 +22,7 @@ public class Staff
             staffNo = "S001";
             staffName = "Krishna";
         } 
-        else if (date.getHours() > 6 && date.getHours() <= 12)
+        else if ((date.getHours() > 6 && date.getHours() <= 12))
         {
             staffNo = "S002";
             staffName = "Berliana";
@@ -32,7 +32,7 @@ public class Staff
             staffNo = "S003";
             staffName = "Aji";
         } 
-        else if (date.getHours() > 18 && date.getHours() <= 24)
+        else if ((date.getHours() > 18 && date.getHours() <= 24) || date.getHours() == 0)
         {
             staffNo = "S004";
             staffName = "Fenty";

@@ -23,36 +23,43 @@ public class MenuOption
 	{
 		for (int i = 0; i < listMenu.getMenuLength()/2; i++)
 		{
-			if(i < 10)
+			if (listMenu.getListMenu()[i] != null)
 			{
-				System.out.print("0" + i + ". " + listMenu.getListMenu()[i].getMenuName());
+				if (i < 10)
+				{
+					System.out.print("0" + i + ". " + listMenu.getListMenu()[i].getMenuName());
+				} 
+				else
+				{
+					System.out.print(i + ". " + listMenu.getListMenu()[i].getMenuName());
+				}
+				if (listMenu.getListMenu()[i].getMenuName().length() > 28)
+
+				{
+					System.out.print("\t ");
+				} 
+				else if (listMenu.getListMenu()[i].getMenuName().length() > 21
+						&& (listMenu.getListMenu()[i].getMenuName().length() <= 28))
+				{
+					System.out.print("\t\t ");
+				} 
+				else if (listMenu.getListMenu()[i].getMenuName().length() > 14
+						&& listMenu.getListMenu()[i].getMenuName().length() <= 21)
+				{
+					System.out.print("\t\t\t ");
+				} 
+				else if (listMenu.getListMenu()[i].getMenuName().length() > 7
+						&& listMenu.getListMenu()[i].getMenuName().length() <= 14)
+				{
+					System.out.print("\t\t\t\t ");
+				} 
+				else if (listMenu.getListMenu()[i].getMenuName().length() > 0
+						&& listMenu.getListMenu()[i].getMenuName().length() <= 7)
+				{
+					System.out.print("\t\t\t\t\t ");
+				}
+				System.out.println(i + listMenu.getMenuLength() / 2 + ". " + listMenu.getListMenu()[i + listMenu.getMenuLength() / 2].getMenuName());
 			}
-			else
-			{
-				System.out.print(i + ". " + listMenu.getListMenu()[i].getMenuName());
-			}
-			if(listMenu.getListMenu()[i].getMenuName().length() > 28)
-			
-			{
-				System.out.print("\t ");
-			}
-			else if(listMenu.getListMenu()[i].getMenuName().length() > 21 && (listMenu.getListMenu()[i].getMenuName().length() <= 28))
-			{
-				System.out.print("\t\t ");
-			}
-			else if(listMenu.getListMenu()[i].getMenuName().length() > 14 && listMenu.getListMenu()[i].getMenuName().length() <= 21)
-			{
-				System.out.print("\t\t\t ");
-			}
-			else if(listMenu.getListMenu()[i].getMenuName().length() > 7 && listMenu.getListMenu()[i].getMenuName().length() <= 14)
-			{
-				System.out.print("\t\t\t\t ");
-			}
-			else if(listMenu.getListMenu()[i].getMenuName().length() > 0 && listMenu.getListMenu()[i].getMenuName().length() <= 7)
-			{
-				System.out.print("\t\t\t\t\t ");
-			}
-			System.out.println(i+listMenu.getMenuLength()/2 + ". " + listMenu.getListMenu()[i+listMenu.getMenuLength()/2].getMenuName());
 		}
 		System.out.println();
 	}
@@ -61,7 +68,7 @@ public class MenuOption
 	{	
 		listMenu.generateMenu();
 		int pilihan = x;
-		String string;
+		String string = "";
 		if(x == 1)
 		{
 			System.out.println("\n" + staves.getStaff().getStaffName() + "	: Silakan pilih menu yang anda mau\n");
@@ -78,14 +85,10 @@ public class MenuOption
 				else
 				{
 					pilihan = Integer.valueOf(string);
-					newOrder(pilihan);
-					listOrder[counter] = newMenu.getListMenu()[pilihan].getMenuName();
-					counter++; System.out.println("Jumlah pesanan saat ini: " + counter);
-					System.out.println("\n" + newStaff.getStaff().getStaffName() + "	: Ada lagi [Ketik 'Tidak' untuk tidak]? \n");
+					System.out.println("\n" + staves.getStaff().getStaffName() + "	: Ada lagi [Ketik 'Tidak' untuk tidak]? \n");
 				}
 			}
 			System.out.println("\n" + staves.getStaff().getStaffName() + "	: Silakan di cek kembali pesanan Anda \n");
-			newBill.getBill(listOrder);
 			scan.nextLine();
 		}
 		else if(x == 2)

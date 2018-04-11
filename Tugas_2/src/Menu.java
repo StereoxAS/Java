@@ -1,8 +1,12 @@
 public class Menu
 {
+	/*
+	 * Array dari menu perlu di ganti ke ArrayList
+	 * Array akan kacau di viewMenu jika diubah length-nya
+	 */
 	private String menuName;
 	private double menuPrice;
-	private Menu listMenu[] = new Menu[99];
+	private Menu listMenu[] = new Menu[24];
 	
 
 	Menu()
