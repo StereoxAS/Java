@@ -1,20 +1,25 @@
 
+
 public class Jadwal2KS1 
 {
-	private PJadwal jadwal[] =new PJadwal[7]; 
+	//private int total;
+	private JadwalParent jadwal[] =new JadwalParent[7]; 
+
 	
 	public Jadwal2KS1() 
 	{
 		PegawaiDosen dosen = new PegawaiDosen();
-		DaftarMataKuliah matkul = new DaftarMataKuliah();
+		MataKuliahList matkul = new MataKuliahList();
 		
-		this.jadwal[0]= new PJadwal("Senin","Sesi1","325",matkul.getMatakuliah(5),dosen.getDosen(7));
-		this.jadwal[1]= new PJadwal("Senin","Sesi3","266",matkul.getMatakuliah(2),dosen.getDosen(5));
-		this.jadwal[2]= new PJadwal("Selasa","Sesi1","326",matkul.getMatakuliah(6),dosen.getDosen(8));
-		this.jadwal[3]= new PJadwal("Selasa","Sesi3","325",matkul.getMatakuliah(3),dosen.getDosen(1));
-		this.jadwal[4]= new PJadwal("Rabu","Sesi1","341",matkul.getMatakuliah(4),dosen.getDosen(3));
-		this.jadwal[5]= new PJadwal("Rabu","Sesi3","266",matkul.getMatakuliah(1),dosen.getDosen(5));
-		this.jadwal[6]= new PJadwal("Kamis","Sesi1","243",matkul.getMatakuliah(0),dosen.getDosen(0));
+		//this.total=7;
+		this.jadwal[0]= new JadwalParent("Senin ","1","325",matkul.getMatakuliah(5),dosen.getDosen(7));
+		this.jadwal[1]= new JadwalParent("Senin ","3","266",matkul.getMatakuliah(2),dosen.getDosen(5));
+		this.jadwal[2]= new JadwalParent("Selasa","1","326",matkul.getMatakuliah(6),dosen.getDosen(8));
+		this.jadwal[3]= new JadwalParent("Selasa","3","325",matkul.getMatakuliah(3),dosen.getDosen(1));
+		this.jadwal[4]= new JadwalParent("Rabu  ","1","341",matkul.getMatakuliah(4),dosen.getDosen(3));
+		this.jadwal[5]= new JadwalParent("Rabu  ","3","266",matkul.getMatakuliah(1),dosen.getDosen(5));
+		this.jadwal[6]= new JadwalParent("Kamis ","1","243",matkul.getMatakuliah(0),dosen.getDosen(0));
+
 	}
 	
 	public void getJadwalReguler()
@@ -90,11 +95,13 @@ public class Jadwal2KS1
 		System.out.println("---------------------------------------------------------------------------------------------------------");
 	}
 	
-	public PJadwal getJadwal(int index) {
+	public JadwalParent getJadwal(int index) 
+  {
 		return this.jadwal[index];
 	} 
 	
-	public void setJadwal(PJadwal jadwal, int index) {
+	public void setJadwal(JadwalParent jadwal, int index) 
+  {
 		this.jadwal[index]=jadwal;
 	}
 
