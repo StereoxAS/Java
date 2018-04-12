@@ -45,7 +45,7 @@ public class PJadwal {
 		this.hari = hari;
 	}
 	public String getRuang() {
-		return ruang;
+		return this.ruang;
 	}
 	public void setRuang(String ruang) {
 		this.ruang = ruang;

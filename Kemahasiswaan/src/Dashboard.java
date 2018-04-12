@@ -7,7 +7,6 @@ public class Dashboard {
 	private Jadwal2KS3 jadwal2KS3 = new Jadwal2KS3();
 	//Kelas[] kelas = {new Kelas2KS1(), new Kelas2KS2()};
 	
-	
 	void Show() {
 		
 		this.tampilkanSesi( waktu.getSesi());
@@ -20,21 +19,20 @@ public class Dashboard {
 		System.out.println("--------------------------------------------------------------------------------------------------");
 		System.out.println("| Ruang | Kelas |\tMatakuliah\t\t\t\t|               Dosen            |");
 		System.out.println("--------------------------------------------------------------------------------------------------");
-			for(int i=0; i<jadwal2KS1.getJadwal().length; i++) 
+			for(int i=0; i < jadwal2KS1.getJadwal().length; i++) 
 			{
-				//if(kelas2ks1.jadwal[i] != null)
 				if(jadwal2KS1.getJadwal(i) != null)
 				{
-					if((jadwal2KS1.getJadwal(i).getSesi() == sesi) && (jadwal2KS1.getJadwal(i).getHari() == waktu.getHariStr()) ) 
+					if((jadwal2KS1.getJadwal(i).getSesi().equalsIgnoreCase(sesi)) && (jadwal2KS1.getJadwal(i).getHari().equalsIgnoreCase(waktu.getHariStr())) ) 
 					{
 					System.out.print("| ");
-					System.out.print(jadwal2KS1.getJadwal(i).getRuang());
+					System.out.print(jadwal2KS1.getJadwal()[i].getRuang());
 					System.out.print("   | ");
-					System.out.print(jadwal2KS1.getJadwal(i).getKelas());
+					System.out.print(jadwal2KS1.getJadwal()[i].getKelas());
 					System.out.print(" | ");
-					System.out.print(jadwal2KS1.getJadwal(i).getMatkul());
+					System.out.print(jadwal2KS1.getJadwal()[i].getMatkul());
 					System.out.print("\t\t\t| ");
-					System.out.print(jadwal2KS1.getJadwal(i).getDosen());
+					System.out.print(jadwal2KS1.getJadwal()[i].getDosen());
 					}
 				}
 			}
