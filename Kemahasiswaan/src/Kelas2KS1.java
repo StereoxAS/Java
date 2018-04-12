@@ -50,7 +50,7 @@ public class Kelas2KS1 extends Kelas
 		mahasiswa[33] = new Mahasiswa("Rozan Fikri", "16.9404", enumJenisKelamin.LAKILAKI);
 		mahasiswa[34] = new Mahasiswa("Todo Parulian Simbolon", "16.9450", enumJenisKelamin.LAKILAKI);
 	}
-	
+		
 	public void getAllMahasiswa()
 	{
 		System.out.println("\nDaftar mahasiswa " + this.toString() + "\n");

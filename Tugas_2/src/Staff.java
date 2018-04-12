@@ -1,5 +1,7 @@
 import java.util.Date;
-
+/*
+ * Finished
+ */
 public class Staff 
 {
     public String staffNo;
@@ -15,22 +17,22 @@ public class Staff
     @SuppressWarnings("deprecation")
 	public Staff getStaff()
     {
-        if (date.getHours() >= 0 && date.getHours() < 7)
+        if (date.getHours() > 0 && date.getHours() <= 6)
         {
             staffNo = "S001";
             staffName = "Krishna";
         } 
-        else if (date.getHours() >= 6 && date.getHours() < 13)
+        else if ((date.getHours() > 6 && date.getHours() <= 12))
         {
             staffNo = "S002";
-            staffName = "Aji";
+            staffName = "Berliana";
         }
-        else if (date.getHours() >= 12 && date.getHours() < 19)
+        else if (date.getHours() > 12 && date.getHours() <= 18)
         {
             staffNo = "S003";
-            staffName = "Berliana";
+            staffName = "Aji";
         } 
-        else if (date.getHours() >= 18 && date.getHours() < 24)
+        else if ((date.getHours() > 18 && date.getHours() <= 24) || date.getHours() == 0)
         {
             staffNo = "S004";
             staffName = "Fenty";

@@ -1,4 +1,3 @@
-
 public class MataKuliah
 {
 	private String kodeMatkul;

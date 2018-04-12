@@ -7,10 +7,6 @@ public class Pegawai implements PegawaiInterface
 	protected String posisi = "Undefined";
 	protected String spesialisasi = "Undefined";
 	
-	public Pegawai() {
-		
-	}
-	
 	public Pegawai(String namaPegawai, String nip, String posisi)
 	{
 		super();
@@ -22,7 +18,8 @@ public class Pegawai implements PegawaiInterface
 
 	public Pegawai()
 	{
-		
+		String string = new String();
+		String string2 = "aduh";
 	}
 	public String getNamaPegawai()
 	{

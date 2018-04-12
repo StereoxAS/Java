@@ -6,7 +6,8 @@ public class Restaurant
     private String bAddress;
     private String website;
     
-    Restaurant(String propertyName, String branchName,String branchNo, String bAddress, String website){
+    Restaurant(String propertyName, String branchName,String branchNo, String bAddress, String website)
+    {
         this.propertyName = propertyName;
         this.branchName = branchName;
         this.branchNo = branchNo;

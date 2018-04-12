@@ -1,13 +1,18 @@
-
 public class Menu
 {
+	/*
+	 * Array dari menu perlu di ganti ke ArrayList
+	 * Array akan kacau di viewMenu jika diubah length-nya
+	 */
 	private String menuName;
 	private double menuPrice;
 	private Menu listMenu[] = new Menu[24];
+	
 
 	Menu()
 	{
-		//this.listMenu[1].setMenuName("Meat & Meat");
+		this.menuName = "Undefined";
+		this.menuPrice = 0;
 	}
 	Menu(String menuName, double menuPrice)
 	{
@@ -19,6 +24,44 @@ public class Menu
 	{
 		return listMenu.length;
 	}
+	
+	public int getFirstEmptyMenu()
+	{
+		// deteksi array kosong yang pertama
+		int emptyIndex = 0;
+		try
+		{
+			for (int i = 0; i < listMenu.length; i++)
+			{
+				if(listMenu[i] == null)
+				{
+					emptyIndex = i;
+					break;
+				}
+			}
+		}
+		catch(Exception e)
+		{
+			System.out.println("\nERROR: Unhandled Exception");
+		}
+		return emptyIndex;
+	}
+	
+	public void setEmptyMenu(int emptyIndex)
+	{
+		// malloc ceritanya
+		this.listMenu[emptyIndex] = new Menu();
+	}
+	
+	public void addMenu(String menuName, int price)
+	{
+		// price dulu yang di set karena getEmptyMenu ngecek namanya aja
+		int index = this.getFirstEmptyMenu();
+		this.setEmptyMenu(index);
+		this.listMenu[index].setMenuPrice(price);
+		this.listMenu[index].setMenuName(menuName);
+	}
+	
 	public void generateMenu()
 	{
 		//this.listMenu = new Menu[jmlMenu];
@@ -55,14 +98,16 @@ public class Menu
 		this.listMenu[23] = new Menu("Beef Rasher", 14091);
 	}
 	
-	public Menu getListMenu(int index)
+	
+	
+	public Menu[] getListMenu()
 	{
-		return listMenu[index];
+		return listMenu;
 	}
 
-	public void setListMenu(Menu listMenu, int index)
+	public void setListMenu(Menu[] listMenu)
 	{
-		this.listMenu[index] = listMenu;
+		this.listMenu = listMenu;
 	}	
 	public String getMenuName()
 	{
