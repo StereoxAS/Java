@@ -1,12 +1,9 @@
 public class PegawaiDosen extends Pegawai
 {
-	//private String idDosen;
+	private String idDosen;
 	//private MataKuliah mataKuliah = new MataKuliah();
-
 	private Pegawai dosen[] = new Pegawai[20];
-	
-	
-	
+		
 	public PegawaiDosen() 
 	{
 		//this.setJabatan("Dosen");
@@ -34,20 +31,30 @@ public class PegawaiDosen extends Pegawai
 	{
 		this.dosen[index] = dosen;
 	}
+	
+	public String getIdDosen()
+	{
+		return idDosen;
+	}
 
-	public PegawaiDosen(String idDosen, String namaPegawai, String nip) {
+	public void setIdDosen(String idDosen)
+	{
+		this.idDosen = idDosen;
+	}
+
+	public PegawaiDosen(String idDosen, String namaPegawai, String nip) 
+	{
 		this.setIdDosen(idDosen);
 		this.setNamaPegawai(namaPegawai);
 		this.setNip(nip);
-		//this.setPosisi(posisi);
-		//this.setJabatan("Dosen");
 	}
 
-	
-	public void getAllPegawai() {
+	public void getAllPegawai() 
+	{
 		System.out.println("Daftar Dosen (" + dosen.length + "):");
 		for(int index = 0; index<dosen.length;index++) {
-			if(dosen[index] != null) {
+			if(dosen[index] != null) 
+			{
 				System.out.println("ID Dosen    = " + dosen[index].getIdDosen());
 				System.out.println("Nama Dosen  = " + dosen[index].getNamaPegawai());
 				System.out.println("NIP         = " + dosen[index].getNip());
@@ -57,14 +64,4 @@ public class PegawaiDosen extends Pegawai
 		}
 		
 	}
-	
-    /*
-	public String getIdDosen() {
-		return idDosen;
-	}
-
-	public void setIdDosen(String idDosen) {
-		this.idDosen = idDosen;
-	}
-	*/
 }
