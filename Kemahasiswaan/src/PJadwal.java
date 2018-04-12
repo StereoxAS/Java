@@ -8,7 +8,8 @@ public class PJadwal {
 	private MataKuliah matkul;
 	private Pegawai dosen;
 	
-	public PJadwal() {
+	public PJadwal() 
+	{
 		this.hari="kosong";
 		this.sesi="kosong";
 		this.kelas="kosong";
@@ -16,7 +17,8 @@ public class PJadwal {
 		this.dosen=null;
 	}
 	
-	public PJadwal(String hari, String sesi, String ruang, MataKuliah matkul, Pegawai dosen ) {
+	public PJadwal(String hari, String sesi, String ruang, MataKuliah matkul, Pegawai dosen ) 
+	{
 		this.hari=hari;
 		this.sesi=sesi;
 		this.ruang=ruang;
@@ -26,7 +28,10 @@ public class PJadwal {
 	
 	
 	
-	
+	public int getSesiNo()
+	{
+		return Integer.valueOf(this.sesi);
+	}
 	public String getSesi() {
 		return sesi;
 	}
@@ -40,7 +45,7 @@ public class PJadwal {
 		this.hari = hari;
 	}
 	public String getRuang() {
-		return ruang;
+		return this.ruang;
 	}
 	public void setRuang(String ruang) {
 		this.ruang = ruang;

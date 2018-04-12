@@ -1,9 +1,11 @@
 
-public class Jadwal2KS2 {
+public class Jadwal2KS2 
+{
 	//private int total;
 	private JadwalParent jadwal[] =new JadwalParent[7]; 
 	
-	public Jadwal2KS2() {
+	public Jadwal2KS2() 
+  {
 		PegawaiDosen dosen = new PegawaiDosen();
 		MataKuliahList matkul = new MataKuliahList();
 		
@@ -15,6 +17,7 @@ public class Jadwal2KS2 {
 		this.jadwal[4]= new JadwalParent("Rabu  ","1","342",matkul.getMatakuliah(1),dosen.getDosen(5));
 		this.jadwal[5]= new JadwalParent("Rabu  ","2","323",matkul.getMatakuliah(5),dosen.getDosen(6));
 		this.jadwal[6]= new JadwalParent("Kamis ","2","242",matkul.getMatakuliah(0),dosen.getDosen(0));
+
 	}
 	
 	public void getJadwalReguler()
@@ -30,21 +33,30 @@ public class Jadwal2KS2 {
 		{	
 			int a=index+1;
 			
-			if(index<9) {
+			if(index<9) 
+      {
 				System.out.print("|  " + a + " | ");
-			} else {
+			} else 
+      {
 				System.out.print("| " + a + " | ");
 			}
 			
 			if(jadwal[index] != null)
 			{
-				if(jadwal[index].getMatkul().getNamaMataKuliah().length()>=25) {
+				if(jadwal[index].getMatkul().getNamaMataKuliah().length()>=25) 
+        {
 					System.out.print(jadwal[index].getMatkul().getNamaMataKuliah()+ "\t");
-				}else if (jadwal[index].getMatkul().getNamaMataKuliah().length()>=17) {
+				}
+        else if (jadwal[index].getMatkul().getNamaMataKuliah().length()>=17) 
+        {
 					System.out.print(jadwal[index].getMatkul().getNamaMataKuliah()+ "\t\t");
-				}else if (jadwal[index].getMatkul().getNamaMataKuliah().length()>=9) {
+				}
+        else if (jadwal[index].getMatkul().getNamaMataKuliah().length()>=9) 
+        {
 					System.out.print(jadwal[index].getMatkul().getNamaMataKuliah()+ "\t\t\t");
-				}else if (jadwal[index].getMatkul().getNamaMataKuliah().length()>=4) {
+				}
+        else if (jadwal[index].getMatkul().getNamaMataKuliah().length()>=4) 
+        {
 					System.out.print(jadwal[index].getMatkul().getNamaMataKuliah()+ "\t\t\t\t");
 				}
 				
@@ -52,13 +64,20 @@ public class Jadwal2KS2 {
 								     +jadwal[index].getSesi()+ "   | " 
 								     +jadwal[index].getRuang()+"\t| ");
 				
-				if(jadwal[index].getDosen().getNamaPegawai().length()>=30) {
+				if(jadwal[index].getDosen().getNamaPegawai().length()>=30) 
+        {
 					System.out.print(jadwal[index].getDosen().getNamaPegawai()+ "\t");
-				}else if (jadwal[index].getDosen().getNamaPegawai().length()>=22) {
+				}
+        else if (jadwal[index].getDosen().getNamaPegawai().length()>=22) 
+        {
 					System.out.print(jadwal[index].getDosen().getNamaPegawai()+ "\t\t");
-				}else if (jadwal[index].getDosen().getNamaPegawai().length()>=14) {
+				}
+        else if (jadwal[index].getDosen().getNamaPegawai().length()>=14) 
+        {
 					System.out.print(jadwal[index].getDosen().getNamaPegawai()+ "\t\t\t");
-				}else if (jadwal[index].getDosen().getNamaPegawai().length()>=6) {
+				}
+        else if (jadwal[index].getDosen().getNamaPegawai().length()>=6) 
+        {
 					System.out.print(jadwal[index].getDosen().getNamaPegawai()+ "\t\t\t\t");
 				}
 				

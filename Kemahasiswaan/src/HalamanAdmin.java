@@ -18,26 +18,44 @@ public class HalamanAdmin
 						 + "4). Lihat Jadwal Reguler Kelas 2KS1\n\n"
 						 + "5). Lihat Jadwal Reguler Kelas 2KS1\n\n"
 						 + "6). Lihat Jadwal Reguler Kelas 2KS1\n\n"
-						 + "7). Exit\n");
+						 + "7). Lihat Dashboard\n\n"
+						 + "8). Exit\n");
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.print(" pilihan : ");
 		a=sc.nextInt();
 		System.out.println("");
 		
-		if(a==1) {
+		if(a==1) 
+		{
 			HalamanAdmin.data2KS1();
-		}else if(a==2) {
+		}
+		else if(a==2) 
+		{
 			HalamanAdmin.data2KS2();
-		}else if(a==3) {
+		}
+		else if(a==3) 
+		{
 			HalamanAdmin.data2KS3();
-		}else if(a==4) {
+		}
+		else if(a==4) 
+		{
 			HalamanAdmin.jadwal2KS1();
-		}else if(a==5) {
+		}
+		else if(a==5) 
+		{
 			HalamanAdmin.jadwal2KS2();
-		}else if(a==6) {
+		}
+		else if(a==6) 
+		{
 			HalamanAdmin.jadwal2KS3();
-		}else if(a==7) {
+		}
+		else if(a==7) 
+		{
+			HalamanAdmin.viewDashboard();
+		}
+		else if(a==8) 
+		{
 			HalamanAwal.getMenu();
 		}
 		
@@ -110,6 +128,17 @@ public class HalamanAdmin
 		Utils.clrscr();
 		Jadwal2KS2 jadwal2KS2 =new Jadwal2KS2();
 		jadwal2KS2.getJadwalReguler();
+		
+		Scanner sc = new Scanner(System.in);
+		sc.nextLine();
+		HalamanAdmin.getHalamanAdmin();
+	}
+	
+	public static void viewDashboard()
+	{
+		Utils.clrscr();
+		Dashboard dashboard = new Dashboard();
+		dashboard.Show();
 		
 		Scanner sc = new Scanner(System.in);
 		sc.nextLine();

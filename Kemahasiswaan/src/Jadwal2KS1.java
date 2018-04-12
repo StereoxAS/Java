@@ -1,9 +1,13 @@
 
-public class Jadwal2KS1 {
+
+public class Jadwal2KS1 
+{
 	//private int total;
 	private JadwalParent jadwal[] =new JadwalParent[7]; 
+
 	
-	public Jadwal2KS1() {
+	public Jadwal2KS1() 
+	{
 		PegawaiDosen dosen = new PegawaiDosen();
 		MataKuliahList matkul = new MataKuliahList();
 		
@@ -15,6 +19,7 @@ public class Jadwal2KS1 {
 		this.jadwal[4]= new JadwalParent("Rabu  ","1","341",matkul.getMatakuliah(4),dosen.getDosen(3));
 		this.jadwal[5]= new JadwalParent("Rabu  ","3","266",matkul.getMatakuliah(1),dosen.getDosen(5));
 		this.jadwal[6]= new JadwalParent("Kamis ","1","243",matkul.getMatakuliah(0),dosen.getDosen(0));
+
 	}
 	
 	public void getJadwalReguler()
@@ -30,21 +35,31 @@ public class Jadwal2KS1 {
 		{	
 			int a=index+1;
 			
-			if(index<9) {
+			if(index<9) 
+			{
 				System.out.print("|  " + a + " | ");
-			} else {
+			} 
+			else 
+			{
 				System.out.print("| " + a + " | ");
 			}
 			
 			if(jadwal[index] != null)
 			{
-				if(jadwal[index].getMatkul().getNamaMataKuliah().length()>=25) {
+				if(jadwal[index].getMatkul().getNamaMataKuliah().length()>=25) 
+				{
 					System.out.print(jadwal[index].getMatkul().getNamaMataKuliah()+ "\t");
-				}else if (jadwal[index].getMatkul().getNamaMataKuliah().length()>=17) {
+				}
+				else if (jadwal[index].getMatkul().getNamaMataKuliah().length()>=17) 
+				{
 					System.out.print(jadwal[index].getMatkul().getNamaMataKuliah()+ "\t\t");
-				}else if (jadwal[index].getMatkul().getNamaMataKuliah().length()>=9) {
+				}
+				else if (jadwal[index].getMatkul().getNamaMataKuliah().length()>=9) 
+				{
 					System.out.print(jadwal[index].getMatkul().getNamaMataKuliah()+ "\t\t\t");
-				}else if (jadwal[index].getMatkul().getNamaMataKuliah().length()>=4) {
+				}
+				else if (jadwal[index].getMatkul().getNamaMataKuliah().length()>=4) 
+				{
 					System.out.print(jadwal[index].getMatkul().getNamaMataKuliah()+ "\t\t\t\t");
 				}
 				
@@ -52,13 +67,20 @@ public class Jadwal2KS1 {
 								     +jadwal[index].getSesi()+ "   | " 
 								     +jadwal[index].getRuang()+"\t| ");
 				
-				if(jadwal[index].getDosen().getNamaPegawai().length()>=30) {
+				if(jadwal[index].getDosen().getNamaPegawai().length()>=30) 
+				{
 					System.out.print(jadwal[index].getDosen().getNamaPegawai()+ "\t");
-				}else if (jadwal[index].getDosen().getNamaPegawai().length()>=22) {
+				}
+				else if (jadwal[index].getDosen().getNamaPegawai().length()>=22) 
+				{
 					System.out.print(jadwal[index].getDosen().getNamaPegawai()+ "\t\t");
-				}else if (jadwal[index].getDosen().getNamaPegawai().length()>=14) {
+				}
+				else if (jadwal[index].getDosen().getNamaPegawai().length()>=14) 
+				{
 					System.out.print(jadwal[index].getDosen().getNamaPegawai()+ "\t\t\t");
-				}else if (jadwal[index].getDosen().getNamaPegawai().length()>=6) {
+				}
+				else if (jadwal[index].getDosen().getNamaPegawai().length()>=6) 
+				{
 					System.out.print(jadwal[index].getDosen().getNamaPegawai()+ "\t\t\t\t");
 				}
 				
@@ -73,11 +95,23 @@ public class Jadwal2KS1 {
 		System.out.println("---------------------------------------------------------------------------------------------------------");
 	}
 	
-	public JadwalParent getJadwal(int index) {
+	public JadwalParent getJadwal(int index) 
+  {
 		return this.jadwal[index];
 	} 
 	
-	public void setJadwal(JadwalParent jadwal, int index) {
+	public void setJadwal(JadwalParent jadwal, int index) 
+  {
 		this.jadwal[index]=jadwal;
+	}
+
+	public PJadwal[] getJadwal()
+	{
+		return jadwal;
+	}
+
+	public void setJadwal(PJadwal[] jadwal)
+	{
+		this.jadwal = jadwal;
 	}
 }
