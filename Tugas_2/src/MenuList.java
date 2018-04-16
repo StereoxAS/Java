@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class MenuList extends Menu
+public class MenuList
 {	
 	/*
 	 * Converted Array of Menu -> ArrayList of Menu

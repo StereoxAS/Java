@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class Order
 {
-	private MenuList listMenu = new MenuList();
-	private String menuDibeli[] = new String[listMenu.getArrayListMenu().size()];
+	//private MenuList listMenu = new MenuList();
+	//private String menuDibeli[] = new String[listMenu.getArrayListMenu().size()];
 	private Bill newBill = new Bill();
 	private Payment payment = new Payment();
 
@@ -14,12 +14,7 @@ public class Order
 	{
 		// di ganti ke Payment
 		this.newBill.setTotalPrice(0);
-	}
-	public void newOrder(int menuChoice)
-	{
-		newMenu.generateMenu(); //menampilkan list menu-menu
-	}
-	
+	}	
 	public Bill getNewBill()
 	{
 		return newBill;
@@ -30,20 +25,9 @@ public class Order
 		this.newBill = newBill;
 	}
 
-	public Menu[] getOrderQueue()
-	{
-		return orderQueue;
-	}
-
-	public void setOrderQueue(Menu[] orderQueue)
-	{
-		this.orderQueue = orderQueue;
-	}
 	public void getOrder()
 	{
 		// TODO Auto-generated method stub
-		newMenu.generateMenu();
-	
 		MenuOption.getMenuOption();
 	}
 	public Payment getPayment()

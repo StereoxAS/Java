@@ -31,6 +31,8 @@ public class Main
 		}
 		
 		//System.out.println("Totalnya jadi Rp" + order.getNewBill().getTotalPrice());
+		
+		scan.close();
 	}
 	public static void getRestaurantDetails()
 	{

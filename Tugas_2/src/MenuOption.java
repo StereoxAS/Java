@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class MenuOption 
 {
-	static final Menu listMenu = new Menu();
+	static final MenuList listMenu = new MenuList();
 	static Staff staves = new Staff();
 	static Scanner scan = new Scanner(System.in);
 	
@@ -23,42 +23,42 @@ public class MenuOption
 	{
 		for (int i = 0; i < listMenu.getMenuLength()/2; i++)
 		{
-			if (listMenu.getListMenu()[i] != null)
+			if (listMenu.getArrayListMenu() != null)
 			{
 				if (i < 10)
 				{
-					System.out.print("0" + i + ". " + listMenu.getListMenu()[i].getMenuName());
+					System.out.print("0" + i + ". " + listMenu.getMenuName(i));
 				} 
 				else
 				{
-					System.out.print(i + ". " + listMenu.getListMenu()[i].getMenuName());
+					System.out.print(i + ". " + listMenu.getMenuName(i));
 				}
-				if (listMenu.getListMenu()[i].getMenuName().length() > 28)
+				if (listMenu.getMenuName(i).length() > 28)
 
 				{
 					System.out.print("\t ");
 				} 
-				else if (listMenu.getListMenu()[i].getMenuName().length() > 21
-						&& (listMenu.getListMenu()[i].getMenuName().length() <= 28))
+				else if (listMenu.getMenuName(i).length() > 21
+						&& (listMenu.getMenuName(i).length() <= 28))
 				{
 					System.out.print("\t\t ");
 				} 
-				else if (listMenu.getListMenu()[i].getMenuName().length() > 14
-						&& listMenu.getListMenu()[i].getMenuName().length() <= 21)
+				else if (listMenu.getMenuName(i).length() > 14
+						&& listMenu.getMenuName(i).length() <= 21)
 				{
 					System.out.print("\t\t\t ");
 				} 
-				else if (listMenu.getListMenu()[i].getMenuName().length() > 7
-						&& listMenu.getListMenu()[i].getMenuName().length() <= 14)
+				else if (listMenu.getMenuName(i).length() > 7
+						&& listMenu.getMenuName(i).length() <= 14)
 				{
 					System.out.print("\t\t\t\t ");
 				} 
-				else if (listMenu.getListMenu()[i].getMenuName().length() > 0
-						&& listMenu.getListMenu()[i].getMenuName().length() <= 7)
+				else if (listMenu.getMenuName(i).length() > 0
+						&& listMenu.getMenuName(i).length() <= 7)
 				{
 					System.out.print("\t\t\t\t\t ");
 				}
-				System.out.println(i + listMenu.getMenuLength() / 2 + ". " + listMenu.getListMenu()[i + listMenu.getMenuLength() / 2].getMenuName());
+				//System.out.println(i + listMenu.getMenuLength() / 2 + ". " + listMenu.getListMenu(i) + listMenu.getMenuLength() / 2].getMenuName());
 			}
 		}
 		System.out.println();
@@ -66,7 +66,6 @@ public class MenuOption
 	
 	public static void displayMenu(int x)
 	{	
-		listMenu.generateMenu();
 		int pilihan = x;
 		String string = "";
 		if(x == 1)

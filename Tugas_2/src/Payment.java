@@ -2,17 +2,17 @@ import java.util.*;
 
 public class Payment 
 {
-   private Menu menu = new Menu();
+   private MenuList menuList = new MenuList();
    private List<Double> bill = new ArrayList<Double>();
    private double total;
    
-   public Menu getMenu()
+   public MenuList getMenu()
    {
-		return menu;
+		return menuList;
    }
-   public void setMenu(Menu menu)
+   public void setMenu(MenuList menuList)
    {
-	   this.menu = menu;
+	   this.menuList = menuList;
    }
    public List<Double> getBill()
    {
@@ -38,7 +38,7 @@ public class Payment
 
    public void setTotalBill(int index)
    {
-       this.bill.add(menu.getListMenu()[index].getMenuPrice());
+       this.bill.add((double) menuList.getMenuPrice(index));
    }
    
    public double getTotalBill()
