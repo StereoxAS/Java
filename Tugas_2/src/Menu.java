@@ -1,4 +1,4 @@
-public class Menu
+public class Menu2
 {
 	/*
 	 * Array dari menu perlu di ganti ke ArrayList

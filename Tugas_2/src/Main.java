@@ -1,4 +1,3 @@
-import java.util.Date;
 import java.util.Scanner;
 
 public class Main
@@ -7,11 +6,7 @@ public class Main
 	
 	public static void main(String[] args)
 	{
-		Date date = new Date();
 		Scanner scan = new Scanner(System.in); 
-		boolean repeat = true;
-		Menu menu = new Menu();
-		menu.generateMenu();
 		Order order = new Order();
 		Utils.clrscr();
 		
@@ -19,7 +14,6 @@ public class Main
 		{
 			while(true)
 			{
-				//Utils.clrscr();
 				order.getOrder();
 			}
 		} 

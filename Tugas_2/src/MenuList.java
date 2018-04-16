@@ -43,8 +43,6 @@ public class MenuList extends Menu
 					{
 						System.out.print("\t\t\t\t");
 					}
-					
-					
 				}
 				break;
 			} 

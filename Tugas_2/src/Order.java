@@ -2,9 +2,9 @@ import java.util.Scanner;
 
 public class Order
 {
-	private Menu orderQueue[] = new Menu[99];
+	private MenuList listMenu = new MenuList();
+	private String menuDibeli[] = new String[listMenu.getArrayListMenu().size()];
 	private Bill newBill = new Bill();
-	private Menu newMenu = new Menu();
 	private Payment payment = new Payment();
 
 	
