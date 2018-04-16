@@ -1,4 +1,9 @@
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
+import java.util.Scanner;
 
 /**
  * Semua fungsi macem2 ke sini 
@@ -98,5 +103,35 @@ public final class Utils
 			}
 		}
 		return listQty;
+	}
+
+	public static File readFile()
+	{
+		Scanner scan = new Scanner(System.in);
+		String pathname = scan.nextLine();
+		try
+		{
+			System.out.print("File yang mau di baca : ");
+			BufferedReader read = new BufferedReader(new FileReader(new File(pathname)));
+			
+			while(read.ready())
+			{
+				System.out.println(read.readLine());
+			}
+			System.out.println("END OF FILE.");
+			read.close();
+		} 
+		catch (FileNotFoundException e)
+		{
+			e.printStackTrace();
+			System.out.println("ERROR: File is not found.");
+		}
+		catch(IOException e)
+		{
+			e.printStackTrace();
+		}
+		scan.close();
+		
+		return new File(pathname);
 	}
 }

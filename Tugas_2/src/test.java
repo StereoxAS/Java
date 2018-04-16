@@ -1,9 +1,9 @@
-import java.util.Date;
+import java.util.*;
 
 public class test
 {
 	public static void main(String[] args)
 	{
-		MenuOption.getMenuOption();
+		MenuList menu = new MenuList();
 	}
 }
