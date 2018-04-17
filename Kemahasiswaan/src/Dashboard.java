@@ -16,9 +16,11 @@ public class Dashboard {
 	private void tampilkanSesi( String sesi) 
 	{
 		System.out.println(waktu.getHariStr() + " " + sesi);
-		System.out.println("--------------------------------------------------------------------------------------------------");
-		System.out.println("| Ruang | Kelas |\tMatakuliah\t\t\t\t|               Dosen            |");
-		System.out.println("--------------------------------------------------------------------------------------------------");
+
+		System.out.println("-------------------------------------------------------------------------------------------------");
+		System.out.println("| Ruang | Kelas |\tMatakuliah\t\t\t\t|         Dosen\t\t\t|");
+		System.out.println("-------------------------------------------------------------------------------------------------");
+
 			for(int i=0; i < jadwal2KS1.getJadwal().length; i++) 
 			{
 				if(jadwal2KS1.getJadwal(i) != null)
@@ -28,11 +30,13 @@ public class Dashboard {
 					System.out.print("| ");
 					System.out.print(jadwal2KS1.getJadwal()[i].getRuang());
 					System.out.print("   | ");
-					System.out.print(jadwal2KS1.getJadwal()[i].getKelas());
-					System.out.print(" | ");
-					System.out.print(jadwal2KS1.getJadwal()[i].getMatkul());
+
+					System.out.print(jadwal2KS1.getKelas());
+					System.out.print("  | ");
+					System.out.print(jadwal2KS1.getJadwal()[i].getMatkul().getNamaMataKuliah());
 					System.out.print("\t\t\t| ");
-					System.out.print(jadwal2KS1.getJadwal()[i].getDosen());
+					System.out.print(jadwal2KS1.getJadwal()[i].getDosen().getNamaPegawai());
+
 					}
 				}
 			}
