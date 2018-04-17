@@ -2,7 +2,6 @@
 
 public class Jadwal2KS1 
 {
-	//private int total;
 	private JadwalParent jadwal[] =new JadwalParent[7]; 
 
 	
@@ -96,22 +95,12 @@ public class Jadwal2KS1
 	}
 	
 	public JadwalParent getJadwal(int index) 
-  {
+	{
 		return this.jadwal[index];
 	} 
 	
 	public void setJadwal(JadwalParent jadwal, int index) 
-  {
+	{
 		this.jadwal[index]=jadwal;
-	}
-
-	public PJadwal[] getJadwal()
-	{
-		return jadwal;
-	}
-
-	public void setJadwal(PJadwal[] jadwal)
-	{
-		this.jadwal = jadwal;
 	}
 }
