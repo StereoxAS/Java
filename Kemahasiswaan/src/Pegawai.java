@@ -1,29 +1,39 @@
 
 public class Pegawai implements PegawaiInterface
 {	
-	protected String namaPegawai = "Undefined";
-	protected String nip = "Undefined";
-	protected String jabatan = "Undefined";
-	protected String posisi = "Undefined";
-	protected String spesialisasi = "Undefined";
+	
+	protected String idDosen;
+	protected String namaPegawai;
+	protected String nip;
+	//protected String jabatan = "Undefined";
+	//protected String posisi = "Undefined";
+	//protected String spesialisasi = "Undefined";
 	
 	public Pegawai() {
-		
+		this.idDosen ="Undefined";
+		this.namaPegawai = "Undefined";
+		this.nip = "Undefined";
+		//protected String jabatan = "Undefined";
 	}
 	
-	public Pegawai(String namaPegawai, String nip, String posisi)
+	public Pegawai(String idDosen, String namaPegawai, String nip)
 	{
 		super();
+		this.idDosen = idDosen;
 		this.namaPegawai = namaPegawai;
 		this.nip = nip;
-		this.jabatan = "jabatan";
-		this.posisi = posisi;
+		//this.jabatan = "jabatan";
+		//this.posisi = posisi;
 	}
 
-	public Pegawai()
-	{
-		
+	public String getIdDosen() {
+		return idDosen;
 	}
+
+	public void setIdDosen(String idDosen) {
+		this.idDosen = idDosen;
+	}
+
 	public String getNamaPegawai()
 	{
 		return this.namaPegawai;
@@ -40,6 +50,8 @@ public class Pegawai implements PegawaiInterface
 	{
 		this.nip = nip;
 	}
+	
+	/*
 	public String getJabatan()
 	{
 		return this.jabatan;
@@ -58,13 +70,15 @@ public class Pegawai implements PegawaiInterface
 	}
 	
 	@Override
+	*/
 	public void getDataPegawai()
 	{
 		// TODO Auto-generated method stub
-		System.out.println("Nama		: " + getNamaPegawai());
+		System.out.println("Id Dosen: " + getIdDosen());
+		System.out.println("Nama	: " + getNamaPegawai());
 		System.out.println("NIP		: " + getNip());
-		System.out.println("Jabatan		: " + getJabatan());
-		System.out.println("Posisi		: " + getPosisi());
+		//System.out.println("Jabatan		: " + getJabatan());
+		//System.out.println("Posisi		: " + getPosisi());
 		System.out.println("Institusi	:" + Pegawai.institusi);
 	}
 	

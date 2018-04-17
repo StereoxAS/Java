@@ -1,4 +1,3 @@
-import java.util.Date;
 import java.util.Scanner;
 
 public class Main
@@ -7,20 +6,33 @@ public class Main
 	
 	public static void main(String[] args)
 	{
-		Date date = new Date();
 		Scanner scan = new Scanner(System.in); 
-		boolean repeat = true;
-		Menu menu = new Menu();
-		menu.generateMenu();
 		Order order = new Order();
 		Utils.clrscr();
 		
-		while(true)
+		try
 		{
-			Utils.clrscr();
-			order.getOrder();
+			while(true)
+			{
+				order.getOrder();
+			}
+		} 
+		catch (ArrayIndexOutOfBoundsException e)
+		{
+			System.out.println("ERROR : Array index out of bound. Application is terminating.");
+			scan.nextLine();
+			Utils.exit();
 		}
+		catch (NullPointerException e)
+		{
+			System.out.println("ERROR : Null Pointer exception. Application is terminating.");
+			scan.nextLine();
+			Utils.exit();
+		}
+		
 		//System.out.println("Totalnya jadi Rp" + order.getNewBill().getTotalPrice());
+		
+		scan.close();
 	}
 	public static void getRestaurantDetails()
 	{

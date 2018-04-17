@@ -27,7 +27,9 @@ public class Kelas2KS3 extends Kelas{
 		mahasiswa[16] = new Mahasiswa("Luqman Ismail Abdurrahim", "16.9241", enumJenisKelamin.PEREMPUAN);
 		mahasiswa[17] = new Mahasiswa("M. Rizqi Bahar", "16.9249", enumJenisKelamin.LAKILAKI);
 		mahasiswa[18] = new Mahasiswa("Meidian Rinaldi", "16.9268", enumJenisKelamin.LAKILAKI);
-		mahasiswa[19] = new Mahasiswa("Muarrikh Yazka Ginang Prasidana", "16.9281", enumJenisKelamin.LAKILAKI);
+
+		mahasiswa[19] = new Mahasiswa("Muarrikh Yazka Ginang P.", "16.9281", enumJenisKelamin.LAKILAKI);
+
 		                                  
 		mahasiswa[20] = new Mahasiswa("Muhammad Alifunnas", "16.9289", enumJenisKelamin.LAKILAKI);
 		mahasiswa[21] = new Mahasiswa("Muhammad Hadid", "16.9294", enumJenisKelamin.LAKILAKI);
@@ -47,6 +49,67 @@ public class Kelas2KS3 extends Kelas{
 		mahasiswa[34] = new Mahasiswa("Yulia Mahmudah", "16.9475", enumJenisKelamin.PEREMPUAN);
 		
 		
+	}
+	
+	public void getAllMahasiswa()
+	{
+		System.out.println("\nDaftar mahasiswa " + this.toString() + "\n");
+		
+		System.out.println("-------------------------------------------------------------------------");
+		System.out.println("| NO |\tNama\t\t\t\t|   NIM\t\t| Jenis Kelamin |");
+		System.out.println("-------------------------------------------------------------------------");
+		
+		for (int index = 0; index < mahasiswa.length; index++)
+		{	
+			int a=index+1;
+			
+			if(index<9) {
+				System.out.print("|  " + a + " | ");
+			} else {
+				System.out.print("| " + a + " | ");
+			}
+			
+			if(mahasiswa[index] != null)
+			{
+				if(mahasiswa[index].getNamaMahasiswa().length()>=25) {
+					System.out.print(mahasiswa[index].getNamaMahasiswa()+ "\t");
+				}else if (mahasiswa[index].getNamaMahasiswa().length()>=17) {
+					System.out.print(mahasiswa[index].getNamaMahasiswa()+ "\t\t");
+				}else if (mahasiswa[index].getNamaMahasiswa().length()>=9) {
+					System.out.print(mahasiswa[index].getNamaMahasiswa()+ "\t\t\t");
+				}else if (mahasiswa[index].getNamaMahasiswa().length()>=4) {
+					System.out.print(mahasiswa[index].getNamaMahasiswa()+ "\t\t\t\t");
+				}
+				
+				System.out.println("|  "+ mahasiswa[index].getNim() + "\t| "
+								+  mahasiswa[index].getJenisKelamin()+"\t|" );
+				
+			}
+			else
+			{
+				System.out.println("\nEnd of line.");
+			}
+			
+		}
+		System.out.println("-------------------------------------------------------------------------");
+	}
+	
+	public Mahasiswa getMahasiswa(int index)
+	{
+		if(index>0 && index<=mahasiswa.length)
+		{
+			return mahasiswa[index-1];
+		}
+		else
+		{
+			return mahasiswa[0];
+		}
+		
+	}
+
+	public void setMahasiswa(Mahasiswa mahasiswa, int index)
+	{
+		this.mahasiswa[index] = mahasiswa;
 	}
 
 }

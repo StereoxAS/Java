@@ -1,9 +1,14 @@
-import java.util.*;
+/*
+ * @author : 1. Ahmad Syahid Ibnu Syarif
+ * 			 2. Alfian Khusnul Ammar
+ * 			 3. Krishna Aji S 
+ */
 
 public class Main 
 {	
 	public static void main(String[] args) 
 	{
-		HalamanAwal.getMenu();	
-  }
+		Utils.homescreen();
+		HalamanAwal.getMenu();
+	}
 }
