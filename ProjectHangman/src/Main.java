@@ -1,20 +1,17 @@
-import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main
 {
+	public static Scanner scan = new Scanner(System.in);
 	public static void main(String[] args)
 	{
-		ArrayList<Integer> selectedNumber = new ArrayList<>();
 		
-		LibraryMahasiswa libMhs = new LibraryMahasiswa();
-		libMhs.generatePertanyaan();
+		LibraryMahasiswa lib = new LibraryMahasiswa();
 		
-		selectedNumber = Utils.selectRandomNumber(Utils.generateUniqueSetOfRandomNumber(libMhs.getListPertanyaan().size()), 3);
-
-		for (int j = 0; j < selectedNumber.size(); j++)
+		while (true)
 		{
-			System.out.println(j+1 + ". " + libMhs.getListPertanyaan().get(selectedNumber.get(j)));
+			System.out.print(lib.getPertanyaan());
+			Main.scan.nextLine();
 		}
-		System.out.println("\nDone.");
 	}
 }

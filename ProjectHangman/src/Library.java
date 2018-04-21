@@ -11,4 +11,8 @@ public abstract class Library
 	public abstract void generatePertanyaan();
 	public abstract String getPertanyaan();
 	public abstract void setPertanyaan();
+	public String getAQuestion()
+	{
+		return listPertanyaan.get(Utils.generateUniqueSetOfRandomNumber(this.listPertanyaan.size()).get(0));
+	};
 }
