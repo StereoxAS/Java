@@ -6,12 +6,18 @@ public class Main
 	public static void main(String[] args)
 	{
 		
-		LibraryMahasiswa lib = new LibraryMahasiswa();
 		
-		while (true)
+		PlayHangman.getInstance();
+		PlayHangman game = PlayHangman.getGame();
+		boolean repeat = true;
+		game.setCategory("Mahasiswa");
+		game.setDifficulty("Easy");
+		
+		while(repeat)
 		{
-			System.out.print(lib.getPertanyaan());
-			Main.scan.nextLine();
+			game.levelDetail();
+			game.newGame();
 		}
+				
 	}
 }

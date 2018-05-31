@@ -10,4 +10,34 @@ public class GameExperience
 	{
 		
 	}
+
+	public int getExperienceGain()
+	{
+		return experienceGain;
+	}
+
+	public void setExperienceGain(int experienceGain)
+	{
+		this.experienceGain = experienceGain;
+	}
+
+	public ArrayList<Integer> getExperienceGate()
+	{
+		return experienceGate;
+	}
+
+	public void setExperienceGate(ArrayList<Integer> experienceGate)
+	{
+		this.experienceGate = experienceGate;
+	}
+
+	public AccountLevel getLevel()
+	{
+		return level;
+	}
+
+	public void setLevel(AccountLevel level)
+	{
+		this.level = level;
+	}
 }

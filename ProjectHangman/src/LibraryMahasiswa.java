@@ -48,6 +48,7 @@ public class LibraryMahasiswa extends Library
 	// Basically RandomSeed is just shuffled list from 1 -> ListPertanyaan.size(), picked sequentially with RandomSeedIndex
 	public String getPertanyaan()
 	{
+		this.generatePertanyaan();
 		return this.getListPertanyaan().get(getRandomSeed().get(getRandomSeedIndex()));
 	}
 

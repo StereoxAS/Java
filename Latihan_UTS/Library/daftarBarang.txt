@@ -1,0 +1,6 @@
+makanan;Indomie;2500
+makanan;Sedaap;2000
+makanan;PopMie;4500
+makanan;SedaapCup;4600
+minuman;Sprite;4500
+minuman;Mizone;3500
